@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { MapPin, Phone } from 'lucide-react'
 import { ZONAS } from '@/lib/data'
 
@@ -46,33 +47,46 @@ export default function SucursalesPage() {
               {zona.sucursales.map((sucursal) => (
                 <li
                   key={sucursal.direccion}
-                  className="flex flex-col gap-4 border-l-4 border-accent bg-card p-6 shadow-sm"
+                  className="flex flex-col gap-4 border-l-4 border-accent bg-card overflow-hidden shadow-sm"
                 >
-                  <h3 className="text-lg font-bold text-primary">
-                    {sucursal.direccion}
-                  </h3>
+                  {sucursal.imagen && (
+                    <div className="relative w-full h-48 -m-6 mb-0">
+                      <Image
+                        src={sucursal.imagen}
+                        alt={`Sucursal San Marino - ${sucursal.direccion}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  
+                  <div className="p-6 pt-4">
+                    <h3 className="text-lg font-bold text-primary">
+                      {sucursal.direccion}
+                    </h3>
 
-                  <p className="text-sm text-foreground">
-                    Mar del Plata, Buenos Aires
-                  </p>
+                    <p className="text-sm text-foreground">
+                      Mar del Plata, Buenos Aires
+                    </p>
 
-                  <div className="flex flex-wrap gap-4 pt-2">
-                    <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(sucursal.mapsQuery)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                    >
-                      <MapPin className="size-4" aria-hidden="true" />
-                      Ver en Mapa
-                    </a>
-                    <a
-                      href={zona.telefonoHref}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                    >
-                      <Phone className="size-4" aria-hidden="true" />
-                      {zona.telefono}
-                    </a>
+                    <div className="flex flex-wrap gap-4 pt-2">
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(sucursal.mapsQuery)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                      >
+                        <MapPin className="size-4" aria-hidden="true" />
+                        Ver en Mapa
+                      </a>
+                      <a
+                        href={zona.telefonoHref}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                      >
+                        <Phone className="size-4" aria-hidden="true" />
+                        {zona.telefono}
+                      </a>
+                    </div>
                   </div>
                 </li>
               ))}
