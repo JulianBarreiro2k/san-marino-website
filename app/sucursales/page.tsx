@@ -72,7 +72,7 @@ export default function SucursalesPage() {
                   <div className="overflow-hidden rounded-2xl ring-1 ring-border">
                     <iframe
                       title={`Mapa de la sucursal ${sucursal.direccion}`}
-                      src={`https://www.google.com/maps?q=${encodeURIComponent(sucursal.mapsQuery)}&output=embed`}
+                      src={`https://maps.google.com/maps?q=${encodeURIComponent(sucursal.mapsQuery)}&z=16&output=embed`}
                       className="h-48 w-full border-0"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
