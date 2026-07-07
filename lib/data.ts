@@ -14,7 +14,15 @@ export type Zona = {
   nombre: string
   telefono: string
   telefonoHref: string
-  sucursales: { direccion: string; mapsQuery: string; imagen?: string }[]
+  sucursales: {
+    direccion: string
+    mapsQuery: string
+    imagen?: string
+    horarios: {
+      dias: string
+      hora: string
+    }[]
+  }[]
 }
 
 export const ZONAS: Zona[] = [
@@ -27,6 +35,10 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Magallanes 3598',
         mapsQuery: 'Magallanes 3598, Mar del Plata',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 0 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 1 h' },
+        ],
       },
     ],
   },
@@ -39,10 +51,18 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Córdoba 1621',
         mapsQuery: 'Córdoba 1621, Mar del Plata',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 0 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 1 h' },
+        ],
       },
       {
         direccion: 'Olavarría esq. Alvarado',
         mapsQuery: 'Olavarría y Alvarado, Mar del Plata',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 1 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 2 h' },
+        ],
       },
     ],
   },
@@ -55,11 +75,19 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Av. Constitución 4018',
         mapsQuery: 'Av. Constitución 4018, Mar del Plata',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 0:30 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 1:30 h' },
+        ],
       },
       {
         direccion: 'Av. Constitución 5627',
         mapsQuery: 'Av. Constitución 5627, Mar del Plata',
         imagen: '/images/local-constitucion-5627.png',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 0:30 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 1:30 h' },
+        ],
       },
     ],
   },

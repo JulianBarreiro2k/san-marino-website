@@ -69,7 +69,15 @@ export default function SucursalesPage() {
                       Mar del Plata, Buenos Aires
                     </p>
 
-                    <div className="flex flex-wrap gap-4 pt-2">
+                    <div className="space-y-1 pt-3 border-t border-border">
+                      {sucursal.horarios.map((horario, idx) => (
+                        <p key={idx} className="text-sm text-foreground">
+                          <span className="font-semibold">{horario.dias}:</span> {horario.hora}
+                        </p>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-4 pt-4">
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(sucursal.mapsQuery)}`}
                         target="_blank"
