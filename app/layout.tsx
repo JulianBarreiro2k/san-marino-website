@@ -1,21 +1,21 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Merriweather, Source_Sans_3 } from 'next/font/google'
+import { Nunito, Poppins } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { DeliveryFab } from '@/components/delivery-fab'
 import './globals.css'
 
-const _merriweather = Merriweather({
+const _poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-merriweather',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
 })
 
-const _sourceSans = Source_Sans_3({
+const _nunito = Nunito({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-source-sans',
+  weight: ['800'],
+  variable: '--font-nunito',
 })
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`bg-background ${_merriweather.variable} ${_sourceSans.variable}`}
+      className={`bg-background ${_poppins.variable} ${_nunito.variable}`}
     >
       <body className="font-sans antialiased">
         <SiteHeader />
