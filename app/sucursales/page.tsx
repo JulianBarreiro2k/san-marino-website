@@ -52,26 +52,9 @@ export default function SucursalesPage() {
                     {sucursal.direccion}
                   </h3>
 
-                  <div className="space-y-1">
-                    <p className="text-sm text-foreground">
-                      Mar del Plata
-                    </p>
-                    <p className="text-sm text-foreground">
-                      Buenos Aires
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">
-                      Phone:{' '}
-                      <a
-                        href={zona.telefonoHref}
-                        className="font-bold text-primary hover:underline"
-                      >
-                        {zona.telefono}
-                      </a>
-                    </p>
-                  </div>
+                  <p className="text-sm text-foreground">
+                    Mar del Plata, Buenos Aires
+                  </p>
 
                   <div className="flex flex-wrap gap-4 pt-2">
                     <a
@@ -81,14 +64,14 @@ export default function SucursalesPage() {
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                     >
                       <MapPin className="size-4" aria-hidden="true" />
-                      View map
+                      Ver en Mapa
                     </a>
                     <a
                       href={zona.telefonoHref}
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                     >
                       <Phone className="size-4" aria-hidden="true" />
-                      Office details
+                      {zona.telefono}
                     </a>
                   </div>
                 </li>
