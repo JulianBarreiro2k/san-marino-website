@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ExternalLink, MapPin, Phone } from 'lucide-react'
+import { MapPin, Phone } from 'lucide-react'
 import { ZONAS } from '@/lib/data'
 
 export const metadata: Metadata = {
@@ -30,71 +30,65 @@ export default function SucursalesPage() {
       {/* Zonas */}
       <section
         id="delivery"
-        className="mx-auto flex max-w-6xl scroll-mt-24 flex-col gap-10 px-4 py-14 md:px-6"
+        className="mx-auto flex max-w-6xl scroll-mt-24 flex-col gap-12 px-4 py-14 md:px-6"
       >
         {ZONAS.map((zona) => (
           <article
             key={zona.id}
-            className="overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-border"
+            className="flex flex-col gap-6"
             aria-labelledby={`zona-${zona.id}`}
           >
-            <div className="flex flex-col gap-4 bg-secondary px-6 py-5 text-secondary-foreground md:flex-row md:items-center md:justify-between">
-              <h2 id={`zona-${zona.id}`} className="text-2xl font-extrabold md:text-3xl">
-                {zona.nombre}
-              </h2>
-              <a
-                href={zona.telefonoHref}
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-bold text-accent-foreground shadow-sm transition-transform hover:scale-105"
-              >
-                <Phone className="size-4" aria-hidden="true" />
-                {`Delivery: ${zona.telefono}`}
-              </a>
-            </div>
+            <h2 id={`zona-${zona.id}`} className="text-xl font-bold md:text-2xl">
+              {zona.nombre} <span className="text-muted-foreground">| {zona.sucursales.length} Sucursales</span>
+            </h2>
 
-            <ul className="grid gap-0 md:grid-cols-2">
+            <ul className="grid gap-6 md:grid-cols-2">
               {zona.sucursales.map((sucursal) => (
                 <li
                   key={sucursal.direccion}
-                  className="flex flex-col gap-4 border-t border-border p-6 md:border-r md:last:border-r-0"
+                  className="flex flex-col gap-4 border-l-4 border-accent bg-card p-6 shadow-sm"
                 >
-                  <div className="flex items-start gap-3">
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                      <MapPin className="size-5 text-primary" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-bold">{sucursal.direccion}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Mar del Plata, Buenos Aires
-                      </p>
-                    </div>
+                  <h3 className="text-lg font-bold text-primary">
+                    {sucursal.direccion}
+                  </h3>
+
+                  <div className="space-y-1">
+                    <p className="text-sm text-foreground">
+                      Mar del Plata
+                    </p>
+                    <p className="text-sm text-foreground">
+                      Buenos Aires
+                    </p>
                   </div>
 
-                  <div className="overflow-hidden rounded-2xl ring-1 ring-border">
-                    <iframe
-                      title={`Mapa de la sucursal ${sucursal.direccion}`}
-                      src={`https://maps.google.com/maps?q=${encodeURIComponent(sucursal.mapsQuery)}&z=16&output=embed`}
-                      className="h-48 w-full border-0"
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">
+                      Phone:{' '}
+                      <a
+                        href={zona.telefonoHref}
+                        className="font-bold text-primary hover:underline"
+                      >
+                        {zona.telefono}
+                      </a>
+                    </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    <a
-                      href={zona.telefonoHref}
-                      className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
-                    >
-                      <Phone className="size-4" aria-hidden="true" />
-                      Llamar
-                    </a>
+                  <div className="flex flex-wrap gap-4 pt-2">
                     <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(sucursal.mapsQuery)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2.5 text-sm font-bold text-foreground transition-colors hover:bg-border"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                     >
-                      <ExternalLink className="size-4" aria-hidden="true" />
-                      Cómo llegar
+                      <MapPin className="size-4" aria-hidden="true" />
+                      View map
+                    </a>
+                    <a
+                      href={zona.telefonoHref}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                    >
+                      <Phone className="size-4" aria-hidden="true" />
+                      Office details
                     </a>
                   </div>
                 </li>
@@ -104,30 +98,7 @@ export default function SucursalesPage() {
         ))}
       </section>
 
-      {/* Nota de delivery */}
-      <section className="bg-muted py-14">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center md:px-6">
-          <h2 className="text-balance text-3xl font-extrabold md:text-4xl">
-            {'¿Preferís que te lo llevemos?'}
-          </h2>
-          <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground">
-            Llamá al teléfono de delivery de tu zona y pedí el helado de tu
-            vida sin moverte de casa.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {ZONAS.map((zona) => (
-              <a
-                key={zona.id}
-                href={zona.telefonoHref}
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 font-bold text-accent-foreground shadow-sm transition-transform hover:scale-105"
-              >
-                <Phone className="size-4" aria-hidden="true" />
-                {`${zona.nombre}: ${zona.telefono}`}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </>
   )
 }
