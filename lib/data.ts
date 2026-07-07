@@ -14,7 +14,7 @@ export type Zona = {
   nombre: string
   telefono: string
   telefonoHref: string
-  sucursales: { direccion: string; mapsQuery: string }[]
+  sucursales: { direccion: string; mapsQuery: string; imagen?: string }[]
 }
 
 export const ZONAS: Zona[] = [
@@ -59,6 +59,7 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Av. Constitución 5627',
         mapsQuery: 'Av. Constitución 5627, Mar del Plata',
+        imagen: '/images/local-constitucion-5627.png',
       },
     ],
   },

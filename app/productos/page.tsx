@@ -54,9 +54,6 @@ function ProductosContent() {
     <>
       {/* Hero header */}
       <section className="pt-16 pb-10 text-center px-4">
-        <p className="mb-4 text-xs font-bold tracking-[0.3em] text-muted-foreground uppercase">
-          Helado Artesanal · Desde 1985
-        </p>
         <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl uppercase leading-none">
           Nuestros
           <br />
@@ -91,9 +88,6 @@ function ProductosContent() {
 
       {/* Tab content */}
       <section className="mx-auto max-w-6xl px-4 py-12 md:px-6">
-        <p className="mb-10 text-center text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
-          {current.description}
-        </p>
         <div className={`grid gap-4 md:gap-6 ${current.cols}`}>
           {current.items.map((sabor) => (
             <FlavorCard key={sabor.nombre} sabor={sabor} />
