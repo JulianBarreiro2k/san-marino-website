@@ -90,7 +90,7 @@ export default function HomePage() {
             <p className="max-w-xl text-balance text-lg md:text-xl font-medium text-foreground mt-4">
               {'El helado de tu vida, elaborado 100% de manera artesanal con recetas propias y la mejor materia prima de Mar del Plata.'}
             </p>
-            <div className="flex flex-wrap gap-4 mt-6 justify-start">
+            <div className="flex flex-wrap gap-4 mt-6 justify-center">
               <Link
                 href="/sucursales#delivery"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
