@@ -33,6 +33,17 @@ export function SiteHeader() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [open])
+
   const isActiveLink = (href: string) => {
     if (href.includes('?')) {
       const [path, query] = href.split('?')
