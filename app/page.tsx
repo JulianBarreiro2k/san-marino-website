@@ -78,9 +78,6 @@ export default function HomePage() {
           className="object-cover object-[center_bottom] md:object-[right_center]"
         />
 
-        {/* Contrast overlay: stronger at top/left where the text sits */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-transparent md:bg-gradient-to-r md:from-background/70 md:via-background/25 md:to-transparent" />
-
         {/* Hero content wrapper */}
         <div className="relative z-10 mx-auto h-full w-full max-w-6xl px-6 md:px-8">
           {/* Inner positioning container */}
