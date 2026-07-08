@@ -75,7 +75,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[70%_90%] md:object-[right_center]"
+          className="object-cover object-[70%_80%] md:object-[right_center]"
         />
 
         {/* Hero content wrapper */}
