@@ -172,7 +172,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-balance mb-4">
               Disfruta del mejor helado
               <br />
-              en la playa
+              de Mar del Plata
             </h2>
             <p className="text-lg md:text-xl font-medium max-w-2xl mx-auto">
               Nuestros helados artesanales te acompañan en cada momento del año
