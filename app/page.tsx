@@ -70,7 +70,7 @@ export default function HomePage() {
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image - Mobile */}
         <Image
-          src="/images/hero-mobile.jpg"
+          src="/images/hero-mobile.png"
           alt="Helados San Marino"
           fill
           priority
@@ -79,7 +79,7 @@ export default function HomePage() {
         />
         {/* Background Image - Desktop */}
         <Image
-          src="/images/hero-desktop.jpg"
+          src="/images/hero-desktop.png"
           alt="Helados San Marino"
           fill
           priority
