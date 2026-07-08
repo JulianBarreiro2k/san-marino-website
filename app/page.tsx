@@ -81,7 +81,7 @@ export default function HomePage() {
         {/* Hero content wrapper */}
         <div className="relative z-10 mx-auto h-full w-full max-w-6xl px-6 md:px-8">
           {/* Inner positioning container */}
-          <div className="flex h-full w-full flex-col justify-start pt-28 md:justify-start md:pt-12 items-center md:items-start text-center md:text-left max-w-full md:max-w-[50%] text-foreground">
+          <div className="flex h-full w-full flex-col justify-start pt-28 md:justify-start md:pt-32 items-center md:items-start text-center md:text-left max-w-full md:max-w-[50%] text-foreground">
             <h1 className="text-balance text-center md:text-left text-5xl font-black md:text-7xl uppercase tracking-tight leading-none">
               Los mejores
               <br />
