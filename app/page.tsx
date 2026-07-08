@@ -136,6 +136,7 @@ export default function HomePage() {
             items={[...SABORES_CREMA, ...SABORES_AGUA].slice(0, 8)}
             viewAllHref="/productos?tab=helados"
           />
+          <div className="border-t border-border" />
 
           {/* Palitos */}
           <ProductsCarousel
@@ -143,6 +144,7 @@ export default function HomePage() {
             items={PALITOS.slice(0, 8)}
             viewAllHref="/productos?tab=palitos"
           />
+          <div className="border-t border-border" />
 
           {/* Postres */}
           <ProductsCarousel
@@ -200,12 +202,12 @@ export default function HomePage() {
             </Link>
           </div>
           {/* Right side - Image */}
-          <div className="relative aspect-square overflow-hidden">
+          <div className="relative aspect-square overflow-hidden md:aspect-square w-full md:w-auto">
             <Image
               src="/images/historia-san-marino.png"
               alt="Mascota de San Marino"
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="100vw"
               className="object-cover"
             />
           </div>
