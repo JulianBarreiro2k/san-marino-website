@@ -46,12 +46,12 @@ export function ProductsCarousel({ title, items, viewAllHref }: ProductsCarousel
         >
           {items.map((item) => (
             <div key={item.nombre} className="flex-shrink-0 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] snap-start">
-              <div className="relative h-48 md:h-56 rounded-lg overflow-hidden bg-muted">
+              <div className="relative rounded-lg overflow-hidden bg-muted">
                 {item.imagen && (
                   <img
                     src={item.imagen}
                     alt={item.nombre}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto"
                   />
                 )}
               </div>
