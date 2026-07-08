@@ -126,7 +126,7 @@ export default function HomePage() {
           <h2 className="text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl font-poppins">
             Conoce Nuestros
             <br />
-            <span className="text-accent">Productos</span>
+            <span className="text-primary">Productos</span>
           </h2>
         </div>
 
