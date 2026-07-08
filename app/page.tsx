@@ -181,7 +181,7 @@ export default function HomePage() {
       </section>
 
       {/* Conoce nuestra historia */}
-      <section className="relative min-h-96 md:h-screen w-full overflow-hidden">
+      <section className="mx-auto max-w-6xl px-4 md:px-6 relative min-h-96 md:h-screen w-full overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 h-full">
           {/* Left side - Text */}
           <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
