@@ -200,7 +200,7 @@ export default function HomePage() {
             </Link>
           </div>
           {/* Right side - Image */}
-          <div className="relative h-96 md:h-full overflow-hidden">
+          <div className="relative aspect-square overflow-hidden">
             <Image
               src="/images/historia-san-marino.png"
               alt="Mascota de San Marino"
