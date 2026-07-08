@@ -214,7 +214,7 @@ export default function HomePage() {
 
       {/* CTA final */}
       <section className="bg-accent text-accent-foreground">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-16 text-center md:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-8 text-center md:px-6">
           <h2 className="text-balance text-3xl font-extrabold md:text-4xl uppercase">
             {'¿SE TE ANTOJÓ? PEDILO AHORA'}
           </h2>
