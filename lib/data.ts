@@ -27,22 +27,6 @@ export type Zona = {
 
 export const ZONAS: Zona[] = [
   {
-    id: 'puerto',
-    nombre: 'Zona Puerto',
-    telefono: '480-8233',
-    telefonoHref: 'tel:+542234808233',
-    sucursales: [
-      {
-        direccion: 'Magallanes 3598',
-        mapsQuery: 'Magallanes 3598, Mar del Plata',
-        horarios: [
-          { dias: 'Domingo a jueves', hora: '11 a 0 h' },
-          { dias: 'Viernes y sábado', hora: '11 a 1 h' },
-        ],
-      },
-    ],
-  },
-  {
     id: 'centro-guemes',
     nombre: 'Zona Centro / Güemes',
     telefono: '494-9455',
@@ -51,6 +35,7 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Córdoba 1621',
         mapsQuery: 'Córdoba 1621, Mar del Plata',
+        imagen: '/images/local-cordoba-1621.png',
         horarios: [
           { dias: 'Domingo a jueves', hora: '11 a 0 h' },
           { dias: 'Viernes y sábado', hora: '11 a 1 h' },
@@ -59,6 +44,7 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Olavarría esq. Alvarado',
         mapsQuery: 'Olavarría y Alvarado, Mar del Plata',
+        imagen: '/images/local-olavarria-alvarado.png',
         horarios: [
           { dias: 'Domingo a jueves', hora: '11 a 1 h' },
           { dias: 'Viernes y sábado', hora: '11 a 2 h' },
@@ -75,6 +61,7 @@ export const ZONAS: Zona[] = [
       {
         direccion: 'Av. Constitución 4018',
         mapsQuery: 'Av. Constitución 4018, Mar del Plata',
+        imagen: '/images/local-constitucion-4018.png',
         horarios: [
           { dias: 'Domingo a jueves', hora: '11 a 0:30 h' },
           { dias: 'Viernes y sábado', hora: '11 a 1:30 h' },
@@ -87,6 +74,23 @@ export const ZONAS: Zona[] = [
         horarios: [
           { dias: 'Domingo a jueves', hora: '11 a 0:30 h' },
           { dias: 'Viernes y sábado', hora: '11 a 1:30 h' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'puerto',
+    nombre: 'Zona Puerto',
+    telefono: '480-8233',
+    telefonoHref: 'tel:+542234808233',
+    sucursales: [
+      {
+        direccion: 'Magallanes 3598',
+        mapsQuery: 'Magallanes 3598, Mar del Plata',
+        imagen: '/images/local-magallanes-3598.png',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 0 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 1 h' },
         ],
       },
     ],

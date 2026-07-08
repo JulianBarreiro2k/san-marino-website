@@ -11,21 +11,31 @@ export const metadata: Metadata = {
 
 export default function SucursalesPage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-14 text-center md:px-6 md:py-16">
-          <p className="rounded-full bg-primary-foreground/15 px-4 py-1.5 text-sm font-bold tracking-wide">
-            MAR DEL PLATA
-          </p>
-          <h1 className="text-balance text-4xl font-extrabold md:text-5xl">
-            Nuestras Sucursales
-          </h1>
-          <p className="max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/90">
-            5 locales en Puerto, Güemes, Centro y Constitución, con delivery
-            propio en cada zona.
-          </p>
-        </div>
+    <div className="relative isolate overflow-hidden min-h-screen">
+      {/* Background Watermark */}
+      <div className="pointer-events-none absolute inset-0 -z-10 flex flex-col justify-around select-none opacity-[0.15] py-24">
+        <span className="text-[18vw] font-black tracking-widest text-foreground text-center rotate-[-10deg] uppercase leading-none">
+          San Marino
+        </span>
+        <span className="text-[18vw] font-black tracking-widest text-foreground text-center rotate-[-10deg] uppercase leading-none">
+          San Marino
+        </span>
+        <span className="text-[18vw] font-black tracking-widest text-foreground text-center rotate-[-10deg] uppercase leading-none">
+          San Marino
+        </span>
+      </div>
+
+      {/* Hero header */}
+      <section className="pt-36 pb-10 text-center px-4">
+        <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl uppercase leading-none">
+          Nuestras
+          <br />
+          <span className="text-primary">Sucursales</span>
+        </h1>
+        <p className="mt-4 max-w-xl mx-auto text-base text-muted-foreground md:text-lg">
+          5 locales en Puerto, Güemes, Centro y Constitución, con delivery
+          propio en cada zona.
+        </p>
       </section>
 
       {/* Zonas */}
@@ -40,7 +50,7 @@ export default function SucursalesPage() {
             aria-labelledby={`zona-${zona.id}`}
           >
             <h2 id={`zona-${zona.id}`} className="text-xl font-bold md:text-2xl">
-              {zona.nombre} <span className="text-muted-foreground">| {zona.sucursales.length} Sucursales</span>
+              {zona.nombre.toUpperCase()} <span className="text-muted-foreground">| {zona.sucursales.length} {zona.sucursales.length === 1 ? 'Sucursal' : 'Sucursales'}</span>
             </h2>
 
             <ul className="grid gap-6 md:grid-cols-2">
@@ -50,7 +60,7 @@ export default function SucursalesPage() {
                   className="flex flex-col gap-4 border-l-4 border-accent bg-card overflow-hidden shadow-sm"
                 >
                   {sucursal.imagen && (
-                    <div className="relative w-full h-48 -m-6 mb-0">
+                    <div className="relative w-full h-48">
                       <Image
                         src={sucursal.imagen}
                         alt={`Sucursal San Marino - ${sucursal.direccion}`}
@@ -102,8 +112,6 @@ export default function SucursalesPage() {
           </article>
         ))}
       </section>
-
-
-    </>
+    </div>
   )
 }

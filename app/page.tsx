@@ -67,44 +67,48 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2 md:px-6 md:py-20">
-          <div className="flex flex-col items-start gap-6">
-            <p className="rounded-full bg-primary-foreground/15 px-4 py-1.5 text-sm font-bold tracking-wide">
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/minimalist-hero.png"
+          alt="Helados San Marino"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_95%] md:object-[right_center]"
+        />
+
+        {/* Hero content wrapper */}
+        <div className="relative z-10 mx-auto h-full w-full max-w-6xl px-6 md:px-8">
+          {/* Inner positioning container */}
+          <div className="flex h-full w-full flex-col justify-start pt-28 md:justify-center md:pt-0 items-start text-left max-w-full md:max-w-[50%] text-foreground">
+            <p className="rounded-full bg-primary/10 px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase text-primary">
               · DESDE 1985 ·
             </p>
-            <h1 className="text-balance text-4xl font-extrabold leading-tight md:text-6xl">
-              Los mejores helados artesanales de Mar del Plata
+            <h1 className="text-balance text-5xl font-black md:text-7xl uppercase tracking-tight leading-none mt-4">
+              Los mejores
+              <br />
+              <span className="text-accent">helados artesanales</span>
             </h1>
-            <p className="max-w-md text-pretty text-lg leading-relaxed text-primary-foreground/90">
-              {'Desde 1985, el helado de tu vida. Elaboración 100% artesanal con recetas propias y la mejor materia prima.'}
+            <p className="max-w-xl text-balance text-lg md:text-xl font-medium text-muted-foreground mt-4">
+              {'El helado de tu vida, elaborado 100% de manera artesanal con recetas propias y la mejor materia prima de Mar del Plata.'}
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4 mt-6 justify-start">
               <Link
                 href="/sucursales#delivery"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 font-bold text-accent-foreground shadow-md transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
               >
                 <Phone className="size-5" aria-hidden="true" />
                 Pedí Delivery
               </Link>
               <Link
                 href="/productos"
-                className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3.5 font-bold text-primary transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
               >
-                Ver Productos
+                Ver Sabores
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Link>
             </div>
-          </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl md:aspect-[5/6]">
-            <Image
-              src="/images/hero-dulce-de-leche.png"
-              alt="Bandeja de helado artesanal de dulce de leche de San Marino"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
           </div>
         </div>
       </section>

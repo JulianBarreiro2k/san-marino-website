@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, Phone, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { BRAND } from '@/lib/data'
@@ -21,6 +21,17 @@ const NAV_LINKS = [
 export function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    // Run once on mount to set initial state
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const isActiveLink = (href: string) => {
     if (href.includes('?')) {
@@ -34,13 +45,20 @@ export function SiteHeader() {
     return pathname === href
   }
 
+  const showTransparent = pathname === '/' && !isScrolled
+
   return (
     <>
-      <header className="sticky top-0 z-60 border-b border-border bg-background shadow-sm">
+      <header className={cn(
+        "fixed top-0 left-0 z-60 w-full transition-all duration-300 ease-in-out",
+        showTransparent
+          ? "border-b border-transparent bg-transparent text-foreground shadow-none"
+          : "border-b border-primary/20 bg-primary text-primary-foreground shadow-sm"
+      )}>
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link
           href="/"
-          className="flex flex-col items-center gap-0.5"
+          className="flex flex-col items-center gap-0.5 hover:opacity-90 transition-opacity"
           onClick={() => setOpen(false)}
         >
           <svg
@@ -56,11 +74,11 @@ export function SiteHeader() {
               fillRule="evenodd"
             />
           </svg>
-          <span className="text-[11px] font-bold tracking-[0.25em] text-muted-foreground">• HELADOS •</span>
+          <span className="text-[11px] font-bold tracking-[0.25em] opacity-75">• HELADOS •</span>
         </Link>
         <button
           type="button"
-          className="inline-flex size-10 items-center justify-center transition-colors text-foreground hover:text-primary"
+          className="inline-flex size-10 items-center justify-center transition-colors hover:opacity-80"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}

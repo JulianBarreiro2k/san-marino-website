@@ -53,7 +53,7 @@ function ProductosContent() {
   return (
     <>
       {/* Hero header */}
-      <section className="pt-16 pb-10 text-center px-4">
+      <section className="pt-36 pb-10 text-center px-4">
         <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl uppercase leading-none">
           Nuestros
           <br />

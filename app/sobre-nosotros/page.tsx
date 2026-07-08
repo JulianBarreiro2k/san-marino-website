@@ -68,7 +68,7 @@ export default function SobreNosotrosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-secondary text-secondary-foreground">
+      <section className="bg-secondary text-secondary-foreground pt-20">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 md:grid-cols-2 md:px-6 md:py-20">
           <div className="flex flex-col gap-5">
             <p className="w-fit rounded-full bg-primary/20 px-4 py-1.5 text-sm font-bold tracking-wide text-primary">
