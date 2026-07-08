@@ -154,43 +154,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Categorías */}
-      <section className="bg-secondary py-16 text-secondary-foreground">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <h2 className="mb-10 text-balance text-center text-3xl font-extrabold md:text-4xl">
-            {'¿Qué estás buscando hoy?'}
-          </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {CATEGORIAS.map((cat) => (
-              <Link
-                key={cat.titulo}
-                href={cat.href}
-                className="group flex flex-col overflow-hidden rounded-3xl bg-card text-card-foreground shadow-md transition-transform hover:-translate-y-1"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={cat.imagen || '/placeholder.svg'}
-                    alt={cat.titulo}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col gap-2 p-6">
-                  <h3 className="text-2xl font-bold">{cat.titulo}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {cat.texto}
-                  </p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 pt-2 font-bold text-primary">
-                    {cat.cta}
-                    <ArrowRight
-                      className="size-4 transition-transform group-hover:translate-x-1"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </div>
-              </Link>
-            ))}
+      {/* Playa / Helados Section */}
+      <section className="relative h-96 md:h-[500px] w-full overflow-hidden">
+        <Image
+          src="/images/beach-section.png"
+          alt="Playa"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-black/30" />
+        {/* Contenido */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white px-6">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-balance mb-4">
+              Disfruta del mejor helado
+              <br />
+              en la playa
+            </h2>
+            <p className="text-lg md:text-xl font-medium max-w-2xl mx-auto">
+              Nuestros helados artesanales te acompañan en cada momento del año
+            </p>
           </div>
         </div>
       </section>
