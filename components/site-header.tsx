@@ -64,7 +64,7 @@ export function SiteHeader() {
         "fixed top-0 left-0 z-60 w-full transition-all duration-300 ease-in-out",
         showTransparent
           ? "border-b border-transparent bg-transparent text-foreground shadow-none"
-          : "border-b border-primary/20 bg-muted text-primary shadow-sm"
+          : "border-b border-primary/20 bg-background text-primary shadow-sm"
       )}>
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link
