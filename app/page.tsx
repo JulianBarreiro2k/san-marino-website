@@ -184,11 +184,11 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 md:px-6 relative min-h-96 md:h-screen w-full overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 h-full">
           {/* Left side - Text */}
-          <div className="flex flex-col justify-center px-6 md:px-12">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground">
+          <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
               Conoce Nuestra Historia
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Somos una empresa familiar marplatense que desde 1985 elabora helados artesanales con pasión y dedicación. Descubre cómo comenzó todo y qué nos hace especiales.
             </p>
             <Link
