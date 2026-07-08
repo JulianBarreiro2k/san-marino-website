@@ -107,12 +107,17 @@ export const SABORES_CREMA: Sabor[] = [
   {
     nombre: 'Dulce de Leche',
     descripcion: 'El clásico de la casa, cremoso y con dulce de leche natural.',
-    imagen: '/images/hero-dulce-de-leche.png',
+    imagen: '/images/helado-dulce-de-leche.jpg',
   },
   {
     nombre: 'Chocolate',
     descripcion: 'Intenso, con cacao de primera calidad y trozos de chocolate.',
-    imagen: '/images/sabor-chocolate.png',
+    imagen: '/images/helado-chocolate.jpg',
+  },
+  {
+    nombre: 'Vainilla',
+    descripcion: 'Clásico y aromático, elaborado con vainilla de primera calidad.',
+    imagen: '/images/helado-vainilla.jpg',
   },
   {
     nombre: 'Açaí',
@@ -138,7 +143,7 @@ export const SABORES_AGUA: Sabor[] = [
   {
     nombre: 'Frutilla',
     descripcion: 'Frutal, natural y liviano. El sabor del verano marplatense.',
-    imagen: '/images/sabor-frutilla.png',
+    imagen: '/images/helado-frutilla.jpg',
   },
   {
     nombre: 'Limón',
