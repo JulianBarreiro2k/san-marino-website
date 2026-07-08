@@ -9,9 +9,8 @@ import {
   Phone,
   Sparkles,
 } from 'lucide-react'
-import { InstagramIcon } from '@/components/social-icons'
 import { ProductsCarousel } from '@/components/products-carousel'
-import { BRAND, INSTAGRAM_GRID, SABORES_CREMA, SABORES_AGUA, PALITOS, POSTRES } from '@/lib/data'
+import { SABORES_CREMA, SABORES_AGUA, PALITOS, POSTRES } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Helados San Marino | Desde 1985, el helado de tu vida — Mar del Plata',
@@ -181,48 +180,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Instagram */}
+      {/* Conoce nuestra historia */}
       <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="mb-8 flex flex-col items-center gap-3 text-center">
-          <h2 className="text-balance text-3xl font-extrabold md:text-4xl">
-            Seguinos en Instagram
-          </h2>
-          <a
-            href={BRAND.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-bold text-primary transition-colors hover:text-accent"
+        <div className="flex flex-col items-center gap-8 text-center">
+          <div>
+            <h2 className="text-balance text-3xl font-extrabold md:text-4xl text-foreground mb-4">
+              Conoce Nuestra Historia
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+              Somos una empresa familiar marplatense que desde 1985 elabora helados artesanales con pasión y dedicación. Descubre cómo comenzó todo y qué nos hace especiales.
+            </p>
+          </div>
+          <Link
+            href="/nosotros"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
           >
-            <InstagramIcon className="size-5" aria-hidden="true" />@
-            {BRAND.instagram}
-          </a>
-        </div>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
-          {INSTAGRAM_GRID.map((post) => (
-            <a
-              key={post.src}
-              href={BRAND.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative aspect-square overflow-hidden rounded-2xl"
-            >
-              <Image
-                src={post.src || '/placeholder.svg'}
-                alt={post.alt}
-                fill
-                sizes="(max-width: 768px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </a>
-          ))}
+            Nuestra Historia
+            <ArrowRight className="size-5" aria-hidden="true" />
+          </Link>
         </div>
       </section>
 
       {/* CTA final */}
       <section className="bg-accent text-accent-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-16 text-center md:px-6">
-          <h2 className="text-balance text-3xl font-extrabold md:text-4xl">
-            {'¿Se te antojó? Pedilo ahora'}
+          <h2 className="text-balance text-3xl font-extrabold md:text-4xl uppercase">
+            {'¿SE TE ANTOJÓ? PEDILO AHORA'}
           </h2>
           <p className="max-w-xl text-pretty leading-relaxed text-accent-foreground/90">
             Delivery en Puerto, Güemes, Centro y Constitución, o visitanos en

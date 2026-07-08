@@ -125,12 +125,6 @@ export const SABORES_CREMA: Sabor[] = [
       'Refrescante, suave y con ese sabor único que te transporta directo a Brasil.',
     imagen: '/images/sabor-acai.png',
   },
-  {
-    nombre: 'Yuzu',
-    descripcion:
-      'Fresco y delicado. Ideal para quienes buscan sabores intensos pero equilibrados.',
-    imagen: '/images/sabor-yuzu.png',
-  },
 ]
 
 export const SABORES_AGUA: Sabor[] = [
@@ -159,12 +153,7 @@ export const POSTRES: Sabor[] = [
       'Helado de crema americana con almendras, recubierto de garrapiñada.',
     imagen: '/images/almendrado.png',
   },
-  {
-    nombre: 'Casatta',
-    descripcion:
-      'El postre helado clásico en capas, con frutas y crema. Ideal para compartir.',
-    imagen: '/images/casatta.png',
-  },
+
   {
     nombre: 'Bombón Suizo',
     descripcion:
