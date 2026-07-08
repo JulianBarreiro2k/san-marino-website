@@ -182,7 +182,7 @@ export default function HomePage() {
 
       {/* Conoce nuestra historia */}
       <section className="mx-auto max-w-6xl px-4 md:px-6 relative min-h-96 md:h-screen w-full overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-fit">
           {/* Left side - Text */}
           <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
