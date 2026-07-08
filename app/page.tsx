@@ -122,9 +122,11 @@ export default function HomePage() {
 
       {/* Productos */}
       <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
+        <div className="mb-12 flex flex-col gap-3">
           <h2 className="text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl font-poppins">
-            Conoce Nuestros Productos
+            Conoce Nuestros
+            <br />
+            <span className="text-accent">Productos</span>
           </h2>
         </div>
 
@@ -149,34 +151,6 @@ export default function HomePage() {
             items={POSTRES.slice(0, 8)}
             viewAllHref="/productos?tab=postres"
           />
-        </div>
-      </section>
-
-      {/* Historia / valores */}
-      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="mb-10 flex flex-col items-center gap-3 text-center">
-          <h2 className="text-balance text-3xl font-extrabold md:text-4xl">
-            Una tradición marplatense
-          </h2>
-          <p className="max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-            {'A lo largo de estos años logramos conjugar experiencia, elaboración artesanal, calidad y tecnología en un sabor único.'}
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {VALORES.map((valor) => (
-            <div
-              key={valor.titulo}
-              className="flex flex-col items-center gap-3 rounded-3xl bg-card p-8 text-center shadow-sm ring-1 ring-border"
-            >
-              <span className="flex size-14 items-center justify-center rounded-full bg-primary/15">
-                <valor.icon className="size-7 text-primary" aria-hidden="true" />
-              </span>
-              <h3 className="text-xl font-bold">{valor.titulo}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {valor.texto}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
