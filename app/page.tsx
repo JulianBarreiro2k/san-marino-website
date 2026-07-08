@@ -182,22 +182,33 @@ export default function HomePage() {
 
       {/* Conoce nuestra historia */}
       <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="flex flex-col items-center gap-8 text-center">
-          <div>
-            <h2 className="text-balance text-3xl font-extrabold md:text-4xl text-foreground mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text */}
+          <div className="flex flex-col gap-6">
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground">
               Conoce Nuestra Historia
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Somos una empresa familiar marplatense que desde 1985 elabora helados artesanales con pasión y dedicación. Descubre cómo comenzó todo y qué nos hace especiales.
             </p>
+            <Link
+              href="/nosotros"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105 w-fit"
+            >
+              Nuestra Historia
+              <ArrowRight className="size-5" aria-hidden="true" />
+            </Link>
           </div>
-          <Link
-            href="/nosotros"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
-          >
-            Nuestra Historia
-            <ArrowRight className="size-5" aria-hidden="true" />
-          </Link>
+          {/* Right side - Image */}
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/historia-san-marino.png"
+              alt="Historia de San Marino"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
