@@ -81,16 +81,16 @@ export default function HomePage() {
         {/* Hero content wrapper */}
         <div className="relative z-10 mx-auto h-full w-full max-w-6xl px-6 md:px-8">
           {/* Inner positioning container */}
-          <div className="flex h-full w-full flex-col justify-start pt-28 md:justify-center md:pt-0 items-center md:items-start text-center md:text-left max-w-full md:max-w-[50%] text-foreground">
-            <h1 className="text-balance text-center text-5xl font-black md:text-7xl uppercase tracking-tight leading-none">
+          <div className="flex h-full w-full flex-col justify-start pt-28 md:justify-start md:pt-12 items-center md:items-start text-center md:text-left max-w-full md:max-w-[50%] text-foreground">
+            <h1 className="text-balance text-center md:text-left text-5xl font-black md:text-7xl uppercase tracking-tight leading-none">
               Los mejores
               <br />
               <span className="text-accent">helados artesanales</span>
             </h1>
-            <p className="max-w-xl text-balance text-lg md:text-xl font-medium text-foreground mt-4">
+            <p className="max-w-xl text-balance text-center md:text-left text-lg md:text-xl font-medium text-foreground mt-4">
               {'El helado de tu vida, elaborado de manera artesanal.'}
             </p>
-            <div className="flex flex-wrap gap-4 mt-6 justify-center">
+            <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
               <Link
                 href="/sucursales#delivery"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
