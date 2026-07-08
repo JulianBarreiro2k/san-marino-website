@@ -88,7 +88,7 @@ export default function HomePage() {
               <span className="text-accent">helados artesanales</span>
             </h1>
             <p className="max-w-xl text-balance text-lg md:text-xl font-medium text-foreground mt-4">
-              {'El helado de tu vida, elaborado 100% de manera artesanal con recetas propias y la mejor materia prima de Mar del Plata.'}
+              {'El helado de tu vida, elaborado de manera artesanal.'}
             </p>
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               <Link
