@@ -181,8 +181,8 @@ export default function HomePage() {
       </section>
 
       {/* Conoce nuestra historia */}
-      <section className="relative min-h-96 md:h-screen w-full overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+      <section className="mx-auto max-w-6xl px-4 md:px-6 relative w-full overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-fit">
           {/* Left side - Text */}
           <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
@@ -200,7 +200,7 @@ export default function HomePage() {
             </Link>
           </div>
           {/* Right side - Image */}
-          <div className="relative h-96 md:h-full overflow-hidden">
+          <div className="relative aspect-square overflow-hidden">
             <Image
               src="/images/historia-san-marino.png"
               alt="Mascota de San Marino"
@@ -214,7 +214,7 @@ export default function HomePage() {
 
       {/* CTA final */}
       <section className="bg-accent text-accent-foreground">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-16 text-center md:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-8 text-center md:px-6">
           <h2 className="text-balance text-3xl font-extrabold md:text-4xl uppercase">
             {'¿SE TE ANTOJÓ? PEDILO AHORA'}
           </h2>
