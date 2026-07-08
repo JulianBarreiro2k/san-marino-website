@@ -84,7 +84,7 @@ export default function HomePage() {
           fill
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
-          className="hidden object-cover object-center md:block"
+          className="hidden object-cover object-[center_70%] md:block"
         />
 
         {/* Hero content wrapper */}
