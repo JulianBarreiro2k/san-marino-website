@@ -139,11 +139,6 @@ export const SABORES_AGUA: Sabor[] = [
     descripcion: 'Frutal, natural y liviano. El sabor del verano marplatense.',
     imagen: '/images/helado-frutilla.jpg',
   },
-  {
-    nombre: 'Limón',
-    descripcion: 'Cítrico y refrescante, elaborado con fruta natural.',
-    imagen: '/images/sabor-limon.png',
-  },
 ]
 
 export const POSTRES: Sabor[] = [
