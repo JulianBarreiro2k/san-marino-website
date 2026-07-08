@@ -107,24 +107,23 @@ export const SABORES_CREMA: Sabor[] = [
   {
     nombre: 'Dulce de Leche',
     descripcion: 'El clásico de la casa, cremoso y con dulce de leche natural.',
-    imagen: '/images/hero-dulce-de-leche.png',
+    imagen: '/images/helado-dulce-de-leche.jpg',
   },
   {
     nombre: 'Chocolate',
     descripcion: 'Intenso, con cacao de primera calidad y trozos de chocolate.',
-    imagen: '/images/sabor-chocolate.png',
+    imagen: '/images/helado-chocolate.jpg',
+  },
+  {
+    nombre: 'Vainilla',
+    descripcion: 'Clásico y aromático, elaborado con vainilla de primera calidad.',
+    imagen: '/images/helado-vainilla.jpg',
   },
   {
     nombre: 'Açaí',
     descripcion:
       'Refrescante, suave y con ese sabor único que te transporta directo a Brasil.',
     imagen: '/images/sabor-acai.png',
-  },
-  {
-    nombre: 'Yuzu',
-    descripcion:
-      'Fresco y delicado. Ideal para quienes buscan sabores intensos pero equilibrados.',
-    imagen: '/images/sabor-yuzu.png',
   },
 ]
 
@@ -138,12 +137,7 @@ export const SABORES_AGUA: Sabor[] = [
   {
     nombre: 'Frutilla',
     descripcion: 'Frutal, natural y liviano. El sabor del verano marplatense.',
-    imagen: '/images/sabor-frutilla.png',
-  },
-  {
-    nombre: 'Limón',
-    descripcion: 'Cítrico y refrescante, elaborado con fruta natural.',
-    imagen: '/images/sabor-limon.png',
+    imagen: '/images/helado-frutilla.jpg',
   },
 ]
 
@@ -154,12 +148,7 @@ export const POSTRES: Sabor[] = [
       'Helado de crema americana con almendras, recubierto de garrapiñada.',
     imagen: '/images/almendrado.png',
   },
-  {
-    nombre: 'Casatta',
-    descripcion:
-      'El postre helado clásico en capas, con frutas y crema. Ideal para compartir.',
-    imagen: '/images/casatta.png',
-  },
+
   {
     nombre: 'Bombón Suizo',
     descripcion:
