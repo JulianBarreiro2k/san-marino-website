@@ -68,14 +68,23 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - Mobile */}
         <Image
-          src="/images/minimalist-hero.png"
+          src="/images/hero-mobile.jpg"
           alt="Helados San Marino"
           fill
           priority
-          sizes="100vw"
-          className="object-cover object-[70%_95%] md:object-[left_30%]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          className="object-cover object-center md:hidden"
+        />
+        {/* Background Image - Desktop */}
+        <Image
+          src="/images/hero-desktop.jpg"
+          alt="Helados San Marino"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          className="hidden object-cover object-center md:block"
         />
 
         {/* Hero content wrapper */}
