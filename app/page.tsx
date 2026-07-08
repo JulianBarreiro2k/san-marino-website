@@ -75,22 +75,19 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_95%] md:object-[right_center]"
+          className="object-cover object-[center_bottom] md:object-[right_center]"
         />
 
         {/* Hero content wrapper */}
         <div className="relative z-10 mx-auto h-full w-full max-w-6xl px-6 md:px-8">
           {/* Inner positioning container */}
           <div className="flex h-full w-full flex-col justify-start pt-28 md:justify-center md:pt-0 items-start text-left max-w-full md:max-w-[50%] text-foreground">
-            <p className="rounded-full bg-primary/10 px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase text-primary">
-              · DESDE 1985 ·
-            </p>
-            <h1 className="text-balance text-5xl font-black md:text-7xl uppercase tracking-tight leading-none mt-4">
+            <h1 className="text-balance text-5xl font-black md:text-7xl uppercase tracking-tight leading-none">
               Los mejores
               <br />
               <span className="text-accent">helados artesanales</span>
             </h1>
-            <p className="max-w-xl text-balance text-lg md:text-xl font-medium text-muted-foreground mt-4">
+            <p className="max-w-xl text-balance text-lg md:text-xl font-medium text-foreground mt-4">
               {'El helado de tu vida, elaborado 100% de manera artesanal con recetas propias y la mejor materia prima de Mar del Plata.'}
             </p>
             <div className="flex flex-wrap gap-4 mt-6 justify-start">
