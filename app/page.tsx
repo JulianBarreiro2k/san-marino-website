@@ -10,7 +10,8 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { InstagramIcon } from '@/components/social-icons'
-import { BRAND, INSTAGRAM_GRID } from '@/lib/data'
+import { ProductsCarousel } from '@/components/products-carousel'
+import { BRAND, INSTAGRAM_GRID, SABORES_CREMA, SABORES_AGUA, PALITOS, POSTRES } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Helados San Marino | Desde 1985, el helado de tu vida — Mar del Plata',
@@ -116,6 +117,38 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Productos */}
+      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
+        <div className="mb-12 flex flex-col items-center gap-3 text-center">
+          <h2 className="text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl font-poppins">
+            Conoce Nuestros Productos
+          </h2>
+        </div>
+
+        <div className="space-y-16">
+          {/* Helados */}
+          <ProductsCarousel
+            title="Helados"
+            items={[...SABORES_CREMA, ...SABORES_AGUA].slice(0, 8)}
+            viewAllHref="/productos?tab=helados"
+          />
+
+          {/* Palitos */}
+          <ProductsCarousel
+            title="Palitos"
+            items={PALITOS.slice(0, 8)}
+            viewAllHref="/productos?tab=palitos"
+          />
+
+          {/* Postres */}
+          <ProductsCarousel
+            title="Postres"
+            items={POSTRES.slice(0, 8)}
+            viewAllHref="/productos?tab=postres"
+          />
         </div>
       </section>
 
