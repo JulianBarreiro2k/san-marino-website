@@ -96,13 +96,13 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
               >
                 <Phone className="size-5" aria-hidden="true" />
-                pedí delivery
+                Pedí delivery
               </Link>
               <Link
                 href="/productos"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
               >
-                ver sabores
+                Ver sabores
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Link>
             </div>
