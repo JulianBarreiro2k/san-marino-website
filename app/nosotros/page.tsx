@@ -8,24 +8,24 @@ export default function NosotrosPage() {
   const values = [
     {
       icon: Flame,
-      title: 'Pasión',
-      description: 'Elaboramos cada helado con dedicación y amor por lo que hacemos.'
+      title: 'Elaboración Artesanal',
+      description: 'Procesos tradicionales que nos permiten producir un helado genuino e inconfundible.'
     },
     {
       icon: Award,
-      title: 'Calidad',
-      description: 'Ingredientes naturales y procesos artesanales en cada producción.'
+      title: 'Calidad Premium',
+      description: 'Producción bajo estrictas normas que garantizan la excelencia en cada helado.'
     },
     {
       icon: Home,
-      title: 'Familia',
-      description: 'Una empresa familiar que valora a su comunidad y clientes.'
+      title: 'Tradición Familiar',
+      description: 'Desde 1985 conjugamos experiencia, tecnología y pasión en nuestro sabor único.'
     }
   ]
 
   const milestones = [
-    { year: '1985', title: 'Fundación', description: 'Nace San Marino en el corazón de Mar del Plata' },
-    { year: '2024', title: 'Presente', description: '5 sucursales sirviendo a la comunidad marplatense' }
+    { year: '1985', title: 'Fundación', description: 'Nace San Marino como empresa familiar de helados artesanales' },
+    { year: 'Hoy', title: '40+ Años', description: 'Referencia en helados artesanales marplatenses' }
   ]
 
   return (
@@ -60,17 +60,17 @@ export default function NosotrosPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6 text-balance">
-              El Comienzo
+              Desde 1985
             </h2>
             <div className="space-y-4 md:space-y-6">
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                En 1985, una familia marplatense decidió crear algo especial: helados artesanales elaborados con pasión y los mejores ingredientes naturales. Lo que comenzó como un pequeño local en el corazón de Mar del Plata se convirtió en una institución local.
+                Helados San Marino es una empresa familiar. Desde el año 1985, con nuestras recetas elaboramos un verdadero Helado Artesanal.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Cada cucharada de San Marino cuenta la historia de nuestro compromiso con la calidad, la tradición y el amor por lo que hacemos. Nuestros clientes no son solo eso, son parte de nuestra familia.
+                A lo largo de estos años logramos conjugar experiencia, elaboración artesanal, calidad y tecnología en un sabor único. Cada helado que producimos es resultado de nuestra dedicación y compromiso con la excelencia.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Hoy, con 5 sucursales en Puerto, Güemes, Centro y Constitución, seguimos manteniéndose fieles a nuestros valores: ingredientes naturales, procesos artesanales y atención personalizada.
+                El proceso de producción, bajo estrictas normas, nos permite producir un helado genuino y de inconfundible sabor. Nuestro objetivo es mantener viva la tradición de los helados artesanales marplatenses.
               </p>
             </div>
           </div>
@@ -139,13 +139,13 @@ export default function NosotrosPage() {
       <section className="bg-primary text-primary-foreground py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 md:mb-8 text-balance">
-            Nuestra Misión
+            Lo Que nos Define
           </h2>
           <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-6 md:mb-8">
-            Crear momentos de felicidad a través de helados artesanales de excelente calidad, manteniendo nuestros valores familiares y el compromiso con la tradición marplatense. Queremos ser el lugar donde cada cliente se sienta parte de nuestra familia.
+            Conjugamos experiencia, elaboración artesanal, calidad y tecnología en un sabor único. El proceso de producción bajo estrictas normas nos permite producir un helado genuino y de inconfundible sabor.
           </p>
           <p className="text-sm sm:text-base md:text-lg opacity-90">
-            Porque cada helado San Marino es más que un dulce, es un recuerdo, una emoción, una tradición que compartimos con vos.
+            Somos un verdadero helado artesanal marplatense, resultado de décadas de dedicación y compromiso con la excelencia.
           </p>
         </div>
       </section>
