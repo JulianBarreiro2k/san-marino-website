@@ -11,7 +11,7 @@ import { FacebookIcon, InstagramIcon } from '@/components/social-icons'
 
 const NAV_LINKS = [
   { href: '/', label: 'Inicio', mobileLabel: 'INICIO' },
-  { href: '/sobre-nosotros', label: 'Sobre Nosotros', mobileLabel: 'NOSOTROS' },
+  { href: '/nosotros', label: 'Nosotros', mobileLabel: 'NOSOTROS' },
   { href: '/productos?tab=helados', label: 'Helados', mobileLabel: 'HELADOS' },
   { href: '/productos?tab=palitos', label: 'Palitos', mobileLabel: 'PALITOS' },
   { href: '/productos?tab=postres', label: 'Postres', mobileLabel: 'POSTRES' },
