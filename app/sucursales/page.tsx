@@ -11,28 +11,21 @@ export const metadata: Metadata = {
 
 export default function SucursalesPage() {
   return (
-    <div className="relative isolate overflow-hidden min-h-screen">
-      {/* Background Watermark */}
-      <div className="pointer-events-none absolute inset-0 -z-10 flex flex-col justify-around select-none opacity-[0.15] py-24">
-        <span className="text-[18vw] font-black tracking-widest text-foreground text-center rotate-[-10deg] uppercase leading-none">
-          San Marino
-        </span>
-        <span className="text-[18vw] font-black tracking-widest text-foreground text-center rotate-[-10deg] uppercase leading-none">
-          San Marino
-        </span>
-        <span className="text-[18vw] font-black tracking-widest text-foreground text-center rotate-[-10deg] uppercase leading-none">
-          San Marino
-        </span>
-      </div>
-
-      {/* Hero header */}
-      <section className="pt-36 pb-10 text-center px-4">
+    <div className="relative isolate overflow-hidden">
+      {/* Hero header with watermark */}
+      <section className="relative pt-36 pb-10 text-center px-4 overflow-hidden">
+        {/* Background Watermark - Only behind header */}
+        <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center select-none opacity-[0.08]">
+          <span className="text-[20vw] font-black tracking-tight text-muted-foreground text-center uppercase leading-none whitespace-nowrap">
+            San Marino
+          </span>
+        </div>
         <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl uppercase leading-none">
           Nuestras
           <br />
           <span className="text-primary">Sucursales</span>
         </h1>
-        <p className="mt-4 max-w-xl mx-auto text-base text-muted-foreground md:text-lg">
+        <p className="mt-4 max-w-xl mx-auto text-base text-muted-foreground md:text-lg relative z-10">
           5 locales en Puerto, Güemes, Centro y Constitución, con delivery
           propio en cada zona.
         </p>
