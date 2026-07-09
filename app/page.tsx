@@ -102,14 +102,14 @@ export default function HomePage() {
             <div className="flex flex-nowrap gap-3 mt-6 justify-center md:justify-start">
               <Link
                 href="/sucursales#delivery"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
               >
                 <Phone className="size-4" aria-hidden="true" />
                 Pedí delivery
               </Link>
               <Link
                 href="/productos"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
               >
                 Ver sabores
                 <ArrowRight className="size-4" aria-hidden="true" />
@@ -183,34 +183,46 @@ export default function HomePage() {
       </section>
 
       {/* Conoce nuestra historia */}
-      <section className="mx-auto max-w-6xl px-4 md:px-6 relative w-full overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-fit">
-          {/* Left side - Text */}
-          <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
-              Conoce Nuestra Historia
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Somos una empresa familiar marplatense que desde 1985 elabora helados artesanales con pasión y dedicación. Descubre cómo comenzó todo y qué nos hace especiales.
-            </p>
-            <Link
-              href="/nosotros"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105 w-fit"
-            >
-              Nuestra Historia
-              <ArrowRight className="size-5" aria-hidden="true" />
-            </Link>
+      <section className="relative w-full overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 h-fit gap-0 md:gap-0">
+            {/* Left side - Text */}
+            <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
+              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
+                Conoce Nuestra Historia
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Somos una empresa familiar marplatense que desde 1985 elabora helados artesanales con pasión y dedicación. Descubre cómo comenzó todo y qué nos hace especiales.
+              </p>
+              <Link
+                href="/nosotros"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105 w-fit"
+              >
+                Nuestra Historia
+                <ArrowRight className="size-5" aria-hidden="true" />
+              </Link>
+            </div>
+            {/* Right side - Image */}
+            <div className="hidden md:block relative aspect-square overflow-hidden">
+              <Image
+                src="/images/historia-san-marino.png"
+                alt="Mascota de San Marino"
+                fill
+                sizes="50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-          {/* Right side - Image */}
-          <div className="relative aspect-square overflow-hidden md:aspect-square w-full md:w-auto">
-            <Image
-              src="/images/historia-san-marino.png"
-              alt="Mascota de San Marino"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
+        </div>
+        {/* Mobile Image - Full Width */}
+        <div className="md:hidden relative w-screen aspect-square -mx-4">
+          <Image
+            src="/images/historia-san-marino.png"
+            alt="Mascota de San Marino"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
