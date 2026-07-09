@@ -102,17 +102,17 @@ export default function HomePage() {
             <div className="flex flex-nowrap gap-3 mt-6 justify-center md:justify-start">
               <Link
                 href="/sucursales#delivery"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base md:text-lg font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm md:text-base font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
               >
-                <Phone className="size-5" aria-hidden="true" />
+                <Phone className="size-4" aria-hidden="true" />
                 Pedí delivery
               </Link>
               <Link
                 href="/productos"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base md:text-lg font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm md:text-base font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
               >
                 Ver sabores
-                <ArrowRight className="size-5" aria-hidden="true" />
+                <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </div>
           </div>
