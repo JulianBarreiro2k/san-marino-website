@@ -15,7 +15,7 @@ export default function SucursalesPage() {
       {/* Hero header with watermark */}
       <section className="relative pt-36 pb-10 text-center px-4 overflow-hidden">
         {/* Background Watermark - Only behind header */}
-        <div className="pointer-events-none absolute inset-x-0 top-1/3 md:top-1/2 -z-10 flex items-center justify-center select-none opacity-[0.08]">
+        <div className="pointer-events-none absolute inset-x-0 top-[45%] md:top-1/2 -z-10 flex items-center justify-center select-none opacity-[0.08]">
           <span className="text-[28vw] md:text-[20vw] font-black tracking-tight text-muted-foreground text-center uppercase leading-none whitespace-nowrap">
             San Marino
           </span>
