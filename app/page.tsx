@@ -215,7 +215,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* Mobile Image - Full Width */}
-        <div className="md:hidden relative w-screen h-[50vw] -mx-4">
+        <div className="md:hidden relative w-screen aspect-square -mx-4">
           <Image
             src="/images/historia-san-marino.png"
             alt="Mascota de San Marino"
