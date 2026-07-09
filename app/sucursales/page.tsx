@@ -50,7 +50,7 @@ export default function SucursalesPage() {
               {zona.sucursales.map((sucursal) => (
                 <li
                   key={sucursal.direccion}
-                  className="flex flex-col gap-4 border-l-4 border-primary bg-card overflow-hidden shadow-sm"
+                  className="flex flex-col gap-4 border-l-4 border-accent bg-background overflow-hidden shadow-sm"
                 >
                   {sucursal.imagen && (
                     <div className="relative w-full h-48">
