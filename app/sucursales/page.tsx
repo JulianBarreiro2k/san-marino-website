@@ -51,7 +51,7 @@ export default function SucursalesPage() {
                 <li
                   key={sucursal.direccion}
                   className="flex flex-col gap-4 border-l-4 border-accent overflow-hidden shadow-sm"
-                  style={{ backgroundColor: '#E2E2E2' }}
+                  style={{ backgroundColor: '#EFF1F1' }}
                 >
                   {sucursal.imagen && (
                     <div className="relative w-full h-48">
