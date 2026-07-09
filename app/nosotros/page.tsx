@@ -2,22 +2,22 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Heart, Users, Leaf } from 'lucide-react'
+import { ArrowRight, Flame, Award, Home } from 'lucide-react'
 
 export default function NosotrosPage() {
   const values = [
     {
-      icon: Heart,
+      icon: Flame,
       title: 'Pasión',
       description: 'Elaboramos cada helado con dedicación y amor por lo que hacemos.'
     },
     {
-      icon: Leaf,
+      icon: Award,
       title: 'Calidad',
       description: 'Ingredientes naturales y procesos artesanales en cada producción.'
     },
     {
-      icon: Users,
+      icon: Home,
       title: 'Familia',
       description: 'Una empresa familiar que valora a su comunidad y clientes.'
     }
@@ -25,8 +25,6 @@ export default function NosotrosPage() {
 
   const milestones = [
     { year: '1985', title: 'Fundación', description: 'Nace San Marino en el corazón de Mar del Plata' },
-    { year: '1995', title: 'Primera expansión', description: 'Abrimos nuestro segundo local en Güemes' },
-    { year: '2005', title: 'Consolidación', description: 'Nos convertimos en referencia de helados artesanales' },
     { year: '2024', title: 'Presente', description: '5 sucursales sirviendo a la comunidad marplatense' }
   ]
 
