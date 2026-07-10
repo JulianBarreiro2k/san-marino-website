@@ -137,48 +137,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="relative py-20 md:py-32 bg-muted/30">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-            <span className="text-accent font-bold uppercase tracking-widest text-sm block mb-3">Nuestros Pilares</span>
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
-              Lo que nos hace <span className="text-primary">únicos</span>
-            </h2>
-            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-              Nos sostenemos sobre valores inquebrantables que garantizan la mejor experiencia en cada cucharada.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((val, idx) => {
-              const Icon = val.icon
-              return (
-                <div
-                  key={idx}
-                  className="group relative flex flex-col justify-between p-8 rounded-3xl bg-background border border-border/50 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                >
-                  <div>
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-colors group-hover:bg-primary group-hover:text-primary-foreground duration-300">
-                      <Icon className="size-6" />
-                    </div>
-                    <h3 className="text-2xl font-black uppercase tracking-tight text-foreground mb-4 font-sans">
-                      {val.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                      {val.description}
-                    </p>
-                  </div>
-                  <div className="mt-8 pt-6 border-t border-border/40 text-xs font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Saber Más <ArrowRight className="size-3.5" />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Standards & Excellence Grid */}
       <section>
         <div className="mx-auto max-w-6xl px-6">
