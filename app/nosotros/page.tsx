@@ -2,109 +2,181 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Flame, Award, Home } from 'lucide-react'
+import { ArrowRight, Heart, Award, Sparkles, ShieldCheck, ChevronRight } from 'lucide-react'
 
 export default function NosotrosPage() {
   const values = [
     {
-      icon: Flame,
+      icon: Sparkles,
       title: 'Elaboración Artesanal',
-      description: 'Procesos tradicionales que nos permiten producir un helado genuino e inconfundible.'
+      description: 'Elaboramos un verdadero helado artesanal a través de procesos tradicionales meticulosos, cuidando la textura y frescura de cada sabor.'
+    },
+    {
+      icon: Heart,
+      title: 'Tradición Familiar',
+      description: 'Desde 1985, somos una familia marplatense que conserva sus recetas secretas con amor y dedicación para ofrecerte el helado de tu vida.'
     },
     {
       icon: Award,
-      title: 'Calidad Premium',
-      description: 'Producción bajo estrictas normas que garantizan la excelencia en cada helado.'
-    },
-    {
-      icon: Home,
-      title: 'Tradición Familiar',
-      description: 'Desde 1985 conjugamos experiencia, tecnología y pasión en nuestro sabor único.'
+      title: 'Calidad & Tecnología',
+      description: 'Conjugamos experiencia artesanal, ingredientes de primer nivel y la última tecnología en refrigeración bajo estrictas normas de producción.'
     }
   ]
 
   const milestones = [
-    { year: '1985', title: 'Fundación', description: 'Nace San Marino como empresa familiar de helados artesanales' },
-    { year: 'Hoy', title: '40+ Años', description: 'Referencia en helados artesanales marplatenses' }
+    {
+      year: '1985',
+      title: 'El Comienzo de un Sueño',
+      description: 'Iniciamos nuestro camino como una pequeña empresa familiar en Mar del Plata, dedicados a crear el helado artesanal definitivo.'
+    },
+    {
+      year: '1998',
+      title: 'Tecnología Italiana',
+      description: 'Incorporamos maquinaria de vanguardia importada de Italia para optimizar la cremosidad sin alterar nuestras recetas tradicionales.'
+    },
+    {
+      year: '2012',
+      title: 'Nuevos Puntos de Encuentro',
+      description: 'Expandimos nuestra presencia abriendo locales estratégicos en Puerto, Güemes y Constitución para estar más cerca de cada familia.'
+    },
+    {
+      year: 'Hoy',
+      title: 'Más de 40 Años de Pasión',
+      description: 'Nos consolidamos como un referente indiscutido en la Costa Atlántica, manteniendo la calidad intacta desde el primer día.'
+    }
+  ]
+
+  const standards = [
+    'Materia prima 100% seleccionada: frutas frescas y chocolates importados.',
+    'Proceso de producción certificado bajo estrictas normas de higiene y seguridad.',
+    'Elaboración diaria para asegurar la máxima frescura y textura aterciopelada.',
+    'Sin colorantes artificiales ni aditivos innecesarios, sabor genuino e inconfundible.'
   ]
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-primary/10 to-accent/5 flex items-center justify-center">
-        {/* Background decoration - subtle */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 right-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent rounded-full blur-3xl" />
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary/10 via-accent/5 to-background">
+        {/* Animated decorative shapes */}
+        <div className="absolute inset-0 pointer-events-none opacity-20">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s' }} />
         </div>
 
-        <div className="relative z-10 w-full flex flex-col items-center justify-center px-4 py-20 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight text-foreground mb-6 text-balance leading-tight">
-            Nuestra Historia
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
+            <Sparkles className="size-3.5" />
+            Desde 1985 con vos
+          </div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-foreground mb-6 leading-none text-balance font-sans">
+            Nuestra <span className="text-primary">Historia</span> &amp; <span className="text-accent">Pasión</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed">
-            Desde 1985, elaboramos helados artesanales con pasión, tradición y los mejores ingredientes naturales
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+            Conocé la trayectoria familiar y el compromiso artesanal detrás del helado de tu vida en Mar del Plata.
           </p>
-          <Link
-            href="/sucursales"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
-          >
-            Visitanos
-            <ArrowRight className="size-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="#historia"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:shadow-primary/30"
+            >
+              Nuestra Esencia
+              <ChevronRight className="size-5" />
+            </Link>
+            <Link
+              href="/sucursales"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background/50 backdrop-blur-sm px-8 py-4 font-bold text-foreground transition-all hover:bg-muted hover:scale-105"
+            >
+              Visitanos
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="mx-auto max-w-6xl px-4 md:px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6 text-balance">
-              Desde 1985
-            </h2>
-            <div className="space-y-4 md:space-y-6">
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Helados San Marino es una empresa familiar. Desde el año 1985, con nuestras recetas elaboramos un verdadero Helado Artesanal.
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                A lo largo de estos años logramos conjugar experiencia, elaboración artesanal, calidad y tecnología en un sabor único. Cada helado que producimos es resultado de nuestra dedicación y compromiso con la excelencia.
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                El proceso de producción, bajo estrictas normas, nos permite producir un helado genuino y de inconfundible sabor. Nuestro objetivo es mantener viva la tradición de los helados artesanales marplatenses.
-              </p>
+      <section id="historia" className="py-20 md:py-32 scroll-mt-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Story Text */}
+            <div className="lg:col-span-7 space-y-8">
+              <div className="space-y-4">
+                <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
+                <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground leading-tight font-sans">
+                  Un verdadero <br />
+                  <span className="text-primary">Helado Artesanal</span>
+                </h2>
+              </div>
+              
+              <div className="space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                <p className="border-l-4 border-accent pl-4 font-medium italic text-foreground">
+                  &ldquo;Helados San Marino es una empresa familiar. Desde el año 1985, con nuestras recetas elaboramos un verdadero Helado Artesanal.&rdquo;
+                </p>
+                <p>
+                  A lo largo de estos años hemos logrado conjugar experiencia, elaboración puramente artesanal, la máxima calidad y tecnología de frío de última generación en un sabor único.
+                </p>
+                <p>
+                  El proceso de producción, llevado a cabo bajo estrictas normas de higiene y control, nos permite producir un helado genuino y de inconfundible sabor, convirtiéndonos en un punto de encuentro clásico para los marplatenses y turistas.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="order-1 md:order-2 relative aspect-square rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src="/images/historia-san-marino.png"
-              alt="Mascota San Marino"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
+
+            {/* Story Image / Feature Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-3 -z-10 scale-95" />
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+                <Image
+                  src="/images/produccion-artesanal.png"
+                  alt="Producción Artesanal de Helados San Marino"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                  <span className="text-accent font-bold text-xs uppercase tracking-widest mb-2">100% Calidad</span>
+                  <h3 className="text-2xl font-black uppercase tracking-tight mb-2 font-sans">Elaboración propia</h3>
+                  <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="bg-muted/40 py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-12 md:mb-16 text-center text-balance">
-            Nuestros Valores
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {values.map((value) => {
-              const Icon = value.icon
+      <section className="relative py-20 md:py-32 bg-muted/30">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+            <span className="text-accent font-bold uppercase tracking-widest text-sm block mb-3">Nuestros Pilares</span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
+              Lo que nos hace <span className="text-primary">únicos</span>
+            </h2>
+            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
+              Nos sostenemos sobre valores inquebrantables que garantizan la mejor experiencia en cada cucharada.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((val, idx) => {
+              const Icon = val.icon
               return (
                 <div
-                  key={value.title}
-                  className="flex flex-col items-center text-center p-6 md:p-8 rounded-2xl bg-background shadow-sm hover:shadow-md transition-shadow"
+                  key={idx}
+                  className="group relative flex flex-col justify-between p-8 rounded-3xl bg-background border border-border/50 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 md:mb-6">
-                    <Icon className="size-6 md:size-8 text-primary" />
+                  <div>
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-colors group-hover:bg-primary group-hover:text-primary-foreground duration-300">
+                      <Icon className="size-6" />
+                    </div>
+                    <h3 className="text-2xl font-black uppercase tracking-tight text-foreground mb-4 font-sans">
+                      {val.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                      {val.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 md:mb-4">{value.title}</h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{value.description}</p>
+                  <div className="mt-8 pt-6 border-t border-border/40 text-xs font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Saber Más <ArrowRight className="size-3.5" />
+                  </div>
                 </div>
               )
             })}
@@ -112,67 +184,113 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="mx-auto max-w-6xl px-4 md:px-6 py-16 md:py-24">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-12 md:mb-16 text-center text-balance">
-          Nuestra Trayectoria
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {milestones.map((milestone, index) => (
-            <div key={milestone.year} className="relative">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm md:text-base flex-shrink-0">
-                  {index + 1}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-black text-accent mb-1">{milestone.year}</h3>
-                  <h4 className="text-base md:text-lg font-bold text-foreground mb-2">{milestone.title}</h4>
-                  <p className="text-sm md:text-base text-muted-foreground">{milestone.description}</p>
-                </div>
-              </div>
+      {/* Standards & Excellence Grid */}
+      <section className="py-20 md:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left side: Graphic visual */}
+            <div className="relative aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl group order-2 lg:order-1">
+              <Image
+                src="/images/local-sanmarino.png"
+                alt="Local Helados San Marino"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
-          ))}
+
+            {/* Right side: Standards Checkmarks */}
+            <div className="space-y-8 order-1 lg:order-2">
+              <div className="space-y-4">
+                <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
+                <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
+                  Procesos bajo <br />
+                  <span className="text-primary">estrictas normas</span>
+                </h2>
+                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+                  Cuidamos cada eslabón de la cadena de frío y elaboración para garantizar un producto libre de impurezas y con la textura ideal.
+                </p>
+              </div>
+
+              <ul className="space-y-4">
+                {standards.map((std, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <div className="mt-1 bg-accent/10 text-accent rounded-full p-1 flex-shrink-0">
+                      <ShieldCheck className="size-4" />
+                    </div>
+                    <span className="text-foreground font-medium text-sm sm:text-base">{std}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="bg-primary text-primary-foreground py-16 md:py-24">
-        <div className="mx-auto max-w-4xl px-4 md:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 md:mb-8 text-balance">
-            Lo Que nos Define
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-6 md:mb-8">
-            Conjugamos experiencia, elaboración artesanal, calidad y tecnología en un sabor único. El proceso de producción bajo estrictas normas nos permite producir un helado genuino y de inconfundible sabor.
-          </p>
-          <p className="text-sm sm:text-base md:text-lg opacity-90">
-            Somos un verdadero helado artesanal marplatense, resultado de décadas de dedicación y compromiso con la excelencia.
-          </p>
+      {/* Timeline Section */}
+      <section className="py-20 md:py-32 bg-muted/30 relative">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+            <span className="text-accent font-bold uppercase tracking-widest text-sm block mb-3">Trayectoria</span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
+              Nuestro <span className="text-primary">Camino</span>
+            </h2>
+            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
+              Repasá los momentos clave que nos llevaron a ser la heladería favorita de la ciudad.
+            </p>
+          </div>
+
+          {/* Timeline container */}
+          <div className="relative border-l-2 border-primary/20 ml-4 md:ml-0 md:grid md:grid-cols-4 md:border-l-0 md:border-t-2 md:pt-12 gap-8 md:space-y-0 space-y-12">
+            {milestones.map((ms, idx) => (
+              <div key={idx} className="relative pl-8 md:pl-0">
+                {/* Node Dot */}
+                <div className="absolute -left-[9px] top-1 md:left-0 md:-top-[21px] w-4 h-4 rounded-full bg-primary ring-4 ring-background flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 rounded-full bg-background" />
+                </div>
+                {/* Milestone content */}
+                <div className="space-y-2">
+                  <span className="inline-block text-3xl font-black text-accent">{ms.year}</span>
+                  <h4 className="text-lg font-bold text-foreground font-sans">{ms.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{ms.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="mx-auto max-w-6xl px-4 md:px-6 py-16 md:py-24">
-        <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl p-8 sm:p-12 md:p-16 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-4 md:mb-6 text-balance">
-            Visitanos Hoy
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-8">
-            Ven a probar nuestros deliciosos helados artesanales en cualquiera de nuestras sucursales en Mar del Plata
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <section className="mx-auto max-w-6xl px-6 py-20 md:py-32">
+        <div className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-accent text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          {/* Background overlay shapes */}
+          <div className="absolute inset-0 pointer-events-none opacity-10">
+            <div className="absolute -top-10 -right-10 w-80 h-80 bg-white rounded-full blur-3xl" />
+          </div>
+
+          <div className="relative z-10 max-w-2xl space-y-4">
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight leading-none text-balance font-sans">
+              ¡Disfrutá del verdadero sabor artesanal!
+            </h2>
+            <p className="text-white/80 text-base sm:text-lg max-w-xl font-medium">
+              Vení a visitarnos a nuestras sucursales o pedí online y te lo llevamos directamente a tu puerta.
+            </p>
+          </div>
+
+          <div className="relative z-10 flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/productos"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-primary shadow-lg hover:scale-105 hover:bg-gray-50 transition-all text-sm sm:text-base"
             >
               Ver Sabores
-              <ArrowRight className="size-5" />
             </Link>
             <Link
               href="/sucursales"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-3.5 font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-white shadow-lg hover:scale-105 hover:bg-accent/90 transition-all text-sm sm:text-base border border-white/20"
             >
-              Nuestras Sucursales
-              <ArrowRight className="size-5" />
+              Sucursales
+              <ArrowRight className="size-4" />
             </Link>
           </div>
         </div>

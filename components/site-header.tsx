@@ -56,7 +56,7 @@ export function SiteHeader() {
     return pathname === href
   }
 
-  const showTransparent = pathname === '/' && !isScrolled
+  const showTransparent = (pathname === '/' || pathname === '/nosotros') && !isScrolled
 
   return (
     <>
