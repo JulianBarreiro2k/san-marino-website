@@ -90,10 +90,10 @@ export default function NosotrosPage() {
 
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Story Text */}
-            <div className="lg:col-span-7 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+          {/* Story Text - Left Half */}
+          <div className="mx-auto max-w-6xl px-6 py-12 md:py-24 flex items-center">
+            <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground leading-tight font-sans">
@@ -114,25 +114,22 @@ export default function NosotrosPage() {
                 </p>
               </div>
             </div>
+          </div>
 
-            {/* Story Image / Feature Card */}
-            <div className="lg:col-span-5 relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-3 -z-10 scale-95" />
-              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
-                <Image
-                  src="/images/produccion-artesanal.png"
-                  alt="Producción Artesanal de Helados San Marino"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                  <span className="text-accent font-bold text-xs uppercase tracking-widest mb-2">100% Calidad</span>
-                  <h3 className="text-2xl font-black uppercase tracking-tight mb-2 font-sans">Elaboración propia</h3>
-                  <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
-                </div>
-              </div>
+          {/* Story Image - Right Half, Full Height */}
+          <div className="relative aspect-square lg:aspect-auto overflow-hidden">
+            <Image
+              src="/images/produccion-artesanal.png"
+              alt="Producción Artesanal de Helados San Marino"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 hover:scale-105"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+              <span className="text-accent font-bold text-xs uppercase tracking-widest mb-2">100% Calidad</span>
+              <h3 className="text-2xl font-black uppercase tracking-tight mb-2 font-sans">Elaboración propia</h3>
+              <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
             </div>
           </div>
         </div>
