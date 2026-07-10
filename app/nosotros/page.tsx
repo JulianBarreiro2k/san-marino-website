@@ -118,7 +118,7 @@ export default function NosotrosPage() {
           </div>
 
           {/* Story Image - Right Half, Full Height */}
-          <div className="relative aspect-square lg:aspect-auto overflow-hidden">
+          <div className="relative h-96 md:h-full aspect-square overflow-hidden">
             <Image
               src="/images/produccion-artesanal.png"
               alt="Producción Artesanal de Helados San Marino"
@@ -142,7 +142,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side: Mascot Image */}
-            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl group order-2 lg:order-1">
+            <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
               <Image
                 src="/images/historia-san-marino.png"
                 alt="Mascota Helados San Marino"
@@ -185,7 +185,7 @@ export default function NosotrosPage() {
 
       {/* CTA Section */}
       <section className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-8" style={{
+        <div className="relative overflow-hidden text-white p-8 sm:p-12 md:p-16 shadow-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-8" style={{
           backgroundImage: 'url(/images/helado-fondo.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
