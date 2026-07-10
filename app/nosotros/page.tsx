@@ -118,7 +118,7 @@ export default function NosotrosPage() {
           </div>
 
           {/* Story Image - Right Half, Full Height */}
-          <div className="relative h-96 md:h-full aspect-square overflow-hidden">
+          <div className="relative h-96 md:aspect-square md:h-full w-full overflow-hidden">
             <Image
               src="/images/produccion-artesanal.png"
               alt="Producción Artesanal de Helados San Marino"
