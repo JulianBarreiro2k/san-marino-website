@@ -140,7 +140,7 @@ export default function NosotrosPage() {
       {/* Standards & Excellence Grid */}
       <section>
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side: Mascot Image */}
             <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
               <Image
