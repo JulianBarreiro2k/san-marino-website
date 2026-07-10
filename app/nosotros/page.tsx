@@ -90,9 +90,10 @@ export default function NosotrosPage() {
 
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-          {/* Story Text - Left Half */}
-          <div className="mx-auto max-w-6xl px-6 py-12 md:py-24 flex items-center">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-0">
+            {/* Story Text - Left Half */}
+            <div className="py-12 md:py-24 flex items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
@@ -132,6 +133,7 @@ export default function NosotrosPage() {
               <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
