@@ -56,7 +56,7 @@ export default function NosotrosPage() {
   return (
     <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary/10 via-accent/5 to-background">
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary/30 via-accent/20 to-background">
         {/* Animated decorative shapes */}
         <div className="absolute inset-0 pointer-events-none opacity-20">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
@@ -64,10 +64,6 @@ export default function NosotrosPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
-            <Sparkles className="size-3.5" />
-            Desde 1985 con vos
-          </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-foreground mb-6 leading-none text-balance font-sans">
             Nuestra <span className="text-primary">Historia</span> &amp; <span className="text-accent">Pasión</span>
           </h1>
@@ -93,7 +89,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Story Section */}
-      <section id="historia" className="py-20 md:py-32 scroll-mt-20">
+      <section id="historia" className="scroll-mt-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Story Text */}
@@ -122,7 +118,7 @@ export default function NosotrosPage() {
             {/* Story Image / Feature Card */}
             <div className="lg:col-span-5 relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-3 -z-10 scale-95" />
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
                 <Image
                   src="/images/produccion-artesanal.png"
                   alt="Producción Artesanal de Helados San Marino"
@@ -185,16 +181,16 @@ export default function NosotrosPage() {
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section className="py-20 md:py-32">
+      <section>
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left side: Graphic visual */}
-            <div className="relative aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl group order-2 lg:order-1">
+            {/* Left side: Mascot Image */}
+            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl group order-2 lg:order-1">
               <Image
-                src="/images/local-sanmarino.png"
-                alt="Local Helados San Marino"
+                src="/images/historia-san-marino.png"
+                alt="Mascota Helados San Marino"
                 fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
@@ -228,48 +224,17 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 md:py-32 bg-muted/30 relative">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-            <span className="text-accent font-bold uppercase tracking-widest text-sm block mb-3">Trayectoria</span>
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
-              Nuestro <span className="text-primary">Camino</span>
-            </h2>
-            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-              Repasá los momentos clave que nos llevaron a ser la heladería favorita de la ciudad.
-            </p>
-          </div>
 
-          {/* Timeline container */}
-          <div className="relative border-l-2 border-primary/20 ml-4 md:ml-0 md:grid md:grid-cols-4 md:border-l-0 md:border-t-2 md:pt-12 gap-8 md:space-y-0 space-y-12">
-            {milestones.map((ms, idx) => (
-              <div key={idx} className="relative pl-8 md:pl-0">
-                {/* Node Dot */}
-                <div className="absolute -left-[9px] top-1 md:left-0 md:-top-[21px] w-4 h-4 rounded-full bg-primary ring-4 ring-background flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-background" />
-                </div>
-                {/* Milestone content */}
-                <div className="space-y-2">
-                  <span className="inline-block text-3xl font-black text-accent">{ms.year}</span>
-                  <h4 className="text-lg font-bold text-foreground font-sans">{ms.title}</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{ms.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
-      <section className="mx-auto max-w-6xl px-6 py-20 md:py-32">
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-accent text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          {/* Background overlay shapes */}
-          <div className="absolute inset-0 pointer-events-none opacity-10">
-            <div className="absolute -top-10 -right-10 w-80 h-80 bg-white rounded-full blur-3xl" />
-          </div>
-
-          <div className="relative z-10 max-w-2xl space-y-4">
+      <section className="mx-auto max-w-6xl px-6">
+        <div className="relative overflow-hidden text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-8" style={{
+          backgroundImage: 'url(/images/helado-fondo.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}>
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-20 max-w-2xl space-y-4">
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight leading-none text-balance font-sans">
               ¡Disfrutá del verdadero sabor artesanal!
             </h2>
@@ -278,7 +243,7 @@ export default function NosotrosPage() {
             </p>
           </div>
 
-          <div className="relative z-10 flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="relative z-20 flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/productos"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-primary shadow-lg hover:scale-105 hover:bg-gray-50 transition-all text-sm sm:text-base"
