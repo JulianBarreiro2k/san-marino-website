@@ -184,14 +184,14 @@ export default function NosotrosPage() {
 
 
       {/* CTA Section */}
-      <section className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden text-white p-8 sm:p-12 md:p-16 shadow-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-8" style={{
-          backgroundImage: 'url(/images/helado-fondo.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}>
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-20 max-w-2xl space-y-4">
+      <section className="relative overflow-hidden text-white shadow-2xl" style={{
+        backgroundImage: 'url(/images/helado-fondo.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-20 mx-auto max-w-6xl px-6 py-20 md:py-32 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div className="max-w-2xl space-y-4">
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight leading-none text-balance font-sans">
               ¡Disfrutá del verdadero sabor artesanal!
             </h2>
@@ -200,7 +200,7 @@ export default function NosotrosPage() {
             </p>
           </div>
 
-          <div className="relative z-20 flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/productos"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-primary shadow-lg hover:scale-105 hover:bg-gray-50 transition-all text-sm sm:text-base"
