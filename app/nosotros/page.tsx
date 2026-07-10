@@ -138,8 +138,8 @@ export default function NosotrosPage() {
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section>
-        <div className="mx-auto max-w-6xl px-6">
+      <section style={{ backgroundColor: '#F5E8EB' }}>
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side: Mascot Image */}
             <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
@@ -154,7 +154,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Right side: Standards Checkmarks */}
-            <div className="space-y-8 order-1 lg:order-2 lg:pl-12" style={{ backgroundColor: '#F5E8EB' }}>
+            <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
