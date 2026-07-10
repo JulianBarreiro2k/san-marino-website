@@ -154,7 +154,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Right side: Standards Checkmarks */}
-            <div className="space-y-8 order-1 lg:order-2">
+            <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
