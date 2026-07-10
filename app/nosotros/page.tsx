@@ -93,7 +93,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-0">
             {/* Story Text - Left Half */}
-            <div className="py-12 md:py-24 flex items-center" style={{ backgroundColor: '#E8F3F1' }}>
+            <div className="py-12 md:py-24 flex items-center" style={{ backgroundColor: '#F5E8EB' }}>
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
@@ -154,7 +154,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Right side: Standards Checkmarks */}
-            <div className="space-y-8 order-1 lg:order-2 lg:pl-12" style={{ backgroundColor: '#E8F3F1' }}>
+            <div className="space-y-8 order-1 lg:order-2 lg:pl-12" style={{ backgroundColor: '#F5E8EB' }}>
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
