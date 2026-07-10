@@ -93,7 +93,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-0">
             {/* Story Text - Left Half */}
-            <div className="py-12 md:py-24 flex items-center">
+            <div className="py-12 md:py-24 flex items-center" style={{ backgroundColor: '#F4E4C1' }}>
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
