@@ -138,8 +138,8 @@ export default function NosotrosPage() {
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section style={{ backgroundColor: '#F5E8EB' }}>
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-32">
+      <section>
+        <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side: Mascot Image */}
             <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
