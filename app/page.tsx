@@ -183,7 +183,7 @@ export default function HomePage() {
       </section>
 
       {/* Conoce nuestra historia */}
-      <section className="relative w-full overflow-hidden" style={{ backgroundColor: '#C8E6E0' }}>
+      <section className="relative w-full overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 h-fit gap-0 md:gap-0">
             {/* Left side - Text */}
