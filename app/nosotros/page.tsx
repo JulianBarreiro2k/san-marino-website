@@ -91,7 +91,7 @@ export default function NosotrosPage() {
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Story Text - Left Half */}
             <div className="py-12 md:py-0 flex items-center lg:aspect-square" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="space-y-8">
@@ -118,7 +118,7 @@ export default function NosotrosPage() {
           </div>
 
           {/* Story Image - Right Half, Full Height */}
-          <div className="relative aspect-square w-full overflow-hidden">
+          <div className="relative aspect-square lg:aspect-auto w-full overflow-hidden">
             <Image
               src="/images/produccion-artesanal.png"
               alt="Producción Artesanal de Helados San Marino"
