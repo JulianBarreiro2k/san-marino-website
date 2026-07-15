@@ -90,8 +90,9 @@ export default function NosotrosPage() {
 
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          {/* Wrapper for text with padding */}
+          <div className="mx-auto max-w-6xl px-6 lg:p-0 w-full">
             {/* Story Text - Left Half */}
             <div className="py-12 md:py-0 flex items-center lg:aspect-square" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="space-y-8">
@@ -113,6 +114,7 @@ export default function NosotrosPage() {
               </div>
             </div>
           </div>
+          </div>
 
           {/* Story Image - Right Half, Full Height */}
           <div className="relative aspect-square lg:aspect-auto w-full overflow-hidden">
@@ -131,13 +133,13 @@ export default function NosotrosPage() {
             </div>
           </div>
         </div>
-        </div>
       </section>
 
       {/* Standards & Excellence Grid */}
       <section>
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+          {/* Wrapper for image without padding on mobile */}
+          <div className="lg:hidden">
             {/* Left side: Mascot Image */}
             <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
               <Image
@@ -149,8 +151,24 @@ export default function NosotrosPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
+          </div>
+          {/* Desktop version with padding */}
+          <div className="hidden lg:block mx-auto max-w-6xl px-6">
+            {/* Left side: Mascot Image */}
+            <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
+              <Image
+                src="/images/historia-san-marino.png"
+                alt="Mascota Helados San Marino"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
+            </div>
+          </div>
 
-            {/* Right side: Standards Checkmarks */}
+          {/* Right side: Standards Checkmarks */}
+          <div className="mx-auto max-w-6xl px-6 w-full">
             <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
