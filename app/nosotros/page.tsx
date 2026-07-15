@@ -64,7 +64,7 @@ export default function NosotrosPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-foreground mb-6 leading-none text-balance font-sans">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-foreground mb-6 leading-none text-balance font-sans">
             Nuestra <span className="text-primary">Historia</span> &amp; <span className="text-accent">Pasión</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
@@ -138,20 +138,6 @@ export default function NosotrosPage() {
       {/* Standards & Excellence Grid */}
       <section>
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-          {/* Wrapper for image without padding on mobile */}
-          <div className="lg:hidden">
-            {/* Left side: Mascot Image */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
-              <Image
-                src="/images/historia-san-marino.png"
-                alt="Mascota Helados San Marino"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
-            </div>
-          </div>
           {/* Desktop version with padding */}
           <div className="hidden lg:block mx-auto max-w-6xl px-6">
             {/* Left side: Mascot Image */}
@@ -168,7 +154,7 @@ export default function NosotrosPage() {
           </div>
 
           {/* Right side: Standards Checkmarks */}
-          <div className="mx-auto max-w-6xl px-6 w-full">
+          <div className="mx-auto max-w-6xl px-6 w-full py-12">
             <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
@@ -191,6 +177,21 @@ export default function NosotrosPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Mobile version - appears after text */}
+          <div className="lg:hidden">
+            {/* Left side: Mascot Image */}
+            <div className="relative aspect-square overflow-hidden shadow-2xl group">
+              <Image
+                src="/images/historia-san-marino.png"
+                alt="Mascota Helados San Marino"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
           </div>
         </div>
