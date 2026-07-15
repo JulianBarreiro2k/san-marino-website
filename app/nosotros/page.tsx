@@ -93,7 +93,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-0">
             {/* Story Text - Left Half */}
-            <div className="py-12 md:py-24 flex items-center" style={{ backgroundColor: '#F5E8EB' }}>
+            <div className="py-12 md:py-0 flex items-center lg:aspect-square" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
@@ -118,7 +118,7 @@ export default function NosotrosPage() {
           </div>
 
           {/* Story Image - Right Half, Full Height */}
-          <div className="relative h-96 md:aspect-square md:h-full w-full overflow-hidden">
+          <div className="relative aspect-square w-full overflow-hidden">
             <Image
               src="/images/produccion-artesanal.png"
               alt="Producción Artesanal de Helados San Marino"
