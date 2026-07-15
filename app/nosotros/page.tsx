@@ -89,7 +89,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Story Section */}
-      <section id="historia" className="scroll-mt-20">
+      <section id="historia" className="scroll-mt-20 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Story Text - Left Half */}
@@ -103,15 +103,12 @@ export default function NosotrosPage() {
                 </h2>
               </div>
               
-              <div className="space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
                 <p className="border-l-4 border-accent pl-4 font-medium italic text-foreground">
-                  &ldquo;Helados San Marino es una empresa familiar. Desde el año 1985, con nuestras recetas elaboramos un verdadero Helado Artesanal.&rdquo;
+                  &ldquo;Desde 1985, elaboramos helados artesanales con recetas familiares y pasión.&rdquo;
                 </p>
                 <p>
-                  A lo largo de estos años hemos logrado conjugar experiencia, elaboración puramente artesanal, la máxima calidad y tecnología de frío de última generación en un sabor único.
-                </p>
-                <p>
-                  El proceso de producción, llevado a cabo bajo estrictas normas de higiene y control, nos permite producir un helado genuino y de inconfundible sabor, convirtiéndonos en un punto de encuentro clásico para los marplatenses y turistas.
+                  Conjugamos tradición, ingredientes de calidad premium y tecnología moderna para crear un sabor único e inconfundible que te llevará a los mejores recuerdos.
                 </p>
               </div>
             </div>
@@ -138,7 +135,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section>
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side: Mascot Image */}
@@ -162,7 +159,7 @@ export default function NosotrosPage() {
                   <span className="text-primary">estrictas normas</span>
                 </h2>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                  Cuidamos cada eslabón de la cadena de frío y elaboración para garantizar un producto libre de impurezas y con la textura ideal.
+                  Cada lote es cuidado con estrictas normas de higiene y control de calidad para garantizar un helado puro, fresco y con textura perfecta.
                 </p>
               </div>
 
