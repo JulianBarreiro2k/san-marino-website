@@ -184,10 +184,10 @@ export default function HomePage() {
 
       {/* Conoce nuestra historia */}
       <section className="relative w-full overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-fit">
-          {/* Left side - Text with white background */}
-          <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-16 bg-background">
-            <div className="mx-auto max-w-6xl w-full">
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 h-fit gap-0 md:gap-0">
+            {/* Left side - Text */}
+            <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
               <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
                 Conoce Nuestra Historia
               </h2>
@@ -202,27 +202,17 @@ export default function HomePage() {
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Link>
             </div>
+            {/* Right side - Image */}
+            <div className="hidden md:block relative aspect-square overflow-hidden">
+              <Image
+                src="/images/historia-san-marino.png"
+                alt="Mascota de San Marino"
+                fill
+                sizes="50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-          {/* Right side - Image with teal background */}
-          <div className="hidden md:flex relative aspect-square overflow-hidden" style={{ backgroundColor: '#1B7A7E' }}>
-            <Image
-              src="/images/historia-san-marino.png"
-              alt="Mascota de San Marino"
-              fill
-              sizes="50vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-        {/* Mobile Image - Full Width */}
-        <div className="md:hidden relative w-screen aspect-square -mx-4">
-          <Image
-            src="/images/historia-san-marino.png"
-            alt="Mascota de San Marino"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
         </div>
       </section>
 
