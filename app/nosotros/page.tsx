@@ -137,25 +137,22 @@ export default function NosotrosPage() {
 
       {/* Standards & Excellence Grid */}
       <section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-          {/* Desktop version with padding */}
-          <div className="hidden lg:block mx-auto max-w-6xl px-6">
-            {/* Left side: Mascot Image */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
-              <Image
-                src="/images/historia-san-marino.png"
-                alt="Mascota Helados San Marino"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-0">
+          {/* Desktop version - Left side: Mascot Image */}
+          <div className="hidden lg:flex relative aspect-square overflow-hidden shadow-2xl group">
+            <Image
+              src="/images/historia-san-marino.png"
+              alt="Mascota Helados San Marino"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
           </div>
 
           {/* Right side: Standards Checkmarks */}
-          <div className="mx-auto max-w-6xl px-6 w-full py-12">
-            <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
+          <div className="mx-auto max-w-6xl px-6 w-full py-12 lg:py-0">
+            <div className="space-y-8 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
