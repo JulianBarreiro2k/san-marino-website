@@ -103,7 +103,7 @@ export default function NosotrosPage() {
                 </h2>
               </div>
               
-              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed lg:pr-12">
                 <p className="border-l-4 border-accent pl-4 font-medium italic text-foreground">
                   &ldquo;Desde 1985, elaboramos helados artesanales con recetas familiares y pasión.&rdquo;
                 </p>
