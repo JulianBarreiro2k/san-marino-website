@@ -64,7 +64,7 @@ export default function NosotrosPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-foreground mb-6 leading-none text-balance font-sans">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-foreground mb-6 leading-none text-balance font-sans">
             Nuestra <span className="text-primary">Historia</span> &amp; <span className="text-accent">Pasión</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
@@ -90,10 +90,11 @@ export default function NosotrosPage() {
 
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          {/* Wrapper for text with padding */}
+          <div className="mx-auto max-w-6xl px-6 lg:p-0 w-full">
             {/* Story Text - Left Half */}
-            <div className="py-12 md:py-24 flex items-center" style={{ backgroundColor: '#F5E8EB' }}>
+            <div className="py-12 md:py-0 flex items-center lg:aspect-square" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
@@ -103,22 +104,20 @@ export default function NosotrosPage() {
                 </h2>
               </div>
               
-              <div className="space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed lg:pr-12">
                 <p className="border-l-4 border-accent pl-4 font-medium italic text-foreground">
-                  &ldquo;Helados San Marino es una empresa familiar. Desde el año 1985, con nuestras recetas elaboramos un verdadero Helado Artesanal.&rdquo;
+                  &ldquo;Desde 1985, elaboramos helados artesanales con recetas familiares y pasión.&rdquo;
                 </p>
                 <p>
-                  A lo largo de estos años hemos logrado conjugar experiencia, elaboración puramente artesanal, la máxima calidad y tecnología de frío de última generación en un sabor único.
-                </p>
-                <p>
-                  El proceso de producción, llevado a cabo bajo estrictas normas de higiene y control, nos permite producir un helado genuino y de inconfundible sabor, convirtiéndonos en un punto de encuentro clásico para los marplatenses y turistas.
+                  Conjugamos tradición, ingredientes de calidad premium y tecnología moderna para crear un sabor único e inconfundible que te llevará a los mejores recuerdos.
                 </p>
               </div>
             </div>
           </div>
+          </div>
 
           {/* Story Image - Right Half, Full Height */}
-          <div className="relative h-96 md:aspect-square md:h-full w-full overflow-hidden">
+          <div className="relative aspect-square lg:aspect-auto w-full overflow-hidden">
             <Image
               src="/images/produccion-artesanal.png"
               alt="Producción Artesanal de Helados San Marino"
@@ -134,13 +133,13 @@ export default function NosotrosPage() {
             </div>
           </div>
         </div>
-        </div>
       </section>
 
       {/* Standards & Excellence Grid */}
       <section>
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+          {/* Desktop version with padding */}
+          <div className="hidden lg:block mx-auto max-w-6xl px-6">
             {/* Left side: Mascot Image */}
             <div className="relative aspect-square overflow-hidden shadow-2xl group order-2 lg:order-1">
               <Image
@@ -152,8 +151,10 @@ export default function NosotrosPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
+          </div>
 
-            {/* Right side: Standards Checkmarks */}
+          {/* Right side: Standards Checkmarks */}
+          <div className="mx-auto max-w-6xl px-6 w-full py-12">
             <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
@@ -162,7 +163,7 @@ export default function NosotrosPage() {
                   <span className="text-primary">estrictas normas</span>
                 </h2>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                  Cuidamos cada eslabón de la cadena de frío y elaboración para garantizar un producto libre de impurezas y con la textura ideal.
+                  Cada lote es cuidado con estrictas normas de higiene y control de calidad para garantizar un helado puro, fresco y con textura perfecta.
                 </p>
               </div>
 
@@ -176,6 +177,21 @@ export default function NosotrosPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Mobile version - appears after text */}
+          <div className="lg:hidden">
+            {/* Left side: Mascot Image */}
+            <div className="relative aspect-square overflow-hidden shadow-2xl group">
+              <Image
+                src="/images/historia-san-marino.png"
+                alt="Mascota Helados San Marino"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
           </div>
         </div>
