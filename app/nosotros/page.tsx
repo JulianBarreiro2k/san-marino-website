@@ -89,7 +89,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Story Section */}
-      <section id="historia" className="scroll-mt-20 py-16 md:py-24">
+      <section id="historia" className="scroll-mt-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Story Text - Left Half */}
@@ -135,7 +135,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section className="py-16 md:py-24">
+      <section>
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side: Mascot Image */}
