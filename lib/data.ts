@@ -219,3 +219,64 @@ export const INSTAGRAM_GRID = [
   { src: '/images/postre_almendrado.jpg', alt: 'Postre Almendrado' },
   { src: '/images/paleta_carita.jpg', alt: 'Carita Cielo' },
 ]
+
+export type CategoriaSabores = {
+  categoria: string
+  sabores: string[]
+}
+
+export const LISTADO_SABORES: CategoriaSabores[] = [
+  {
+    categoria: 'CREMAS',
+    sabores: [
+      'Almendrado',
+      'Cookies',
+      'Crema Americana',
+      'Flan con Dulce de Leche',
+      'Granizado',
+      'Kinder Bueno',
+      'Kinder Huevo',
+      'Oreo',
+      'Sambayón',
+      'Tramontana',
+      'Vainilla',
+    ],
+  },
+  {
+    categoria: 'DULCES DE LECHE',
+    sabores: [
+      'Dulce de Leche',
+      'Dulce de Leche Granizado',
+      'Dulce de Leche con Nuez',
+      'Super Dulce de Leche',
+    ],
+  },
+  {
+    categoria: 'CHOCOLATES',
+    sabores: [
+      'Chocolate',
+      'Chocolate con Almendras',
+      'Chocolate Amargo',
+      'Chocolate Blanco',
+      'Chocolate Patagónico',
+      'Chocolate Rocher',
+      'Chocolate Shot',
+      'Chocolate Suizo',
+    ],
+  },
+  {
+    categoria: 'FRUTAS AL AGUA Y A LA CREMA',
+    sabores: [
+      'Ananá al Agua',
+      'Banana Split',
+      'Cerezas al Marraschino',
+      'Coco Bauty',
+      'Frutillas a la Crema',
+      'Frutos del Bosque',
+      'Limón al Agua',
+      'Menta Granizada',
+      'Mousse de Limón',
+    ],
+  },
+]
+

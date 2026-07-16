@@ -89,11 +89,11 @@ export default function NosotrosPage() {
       </section>
 
       {/* Story Section */}
-      <section id="historia" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+      <section id="historia" className="scroll-mt-20 overflow-hidden">
+        <div className="flex flex-col lg:max-w-6xl lg:mx-auto lg:grid lg:grid-cols-2 gap-0 lg:items-center">
+
             {/* Story Text - Left Half */}
-            <div className="space-y-8 py-8 lg:py-0 lg:pr-12">
+            <div className="space-y-8 py-8 lg:py-0 lg:pr-12 px-6">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground leading-tight font-sans">
@@ -113,7 +113,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Story Image - Right Half */}
-            <div className="relative aspect-square w-full overflow-hidden">
+            <div className="relative aspect-square w-screen overflow-hidden -mr-[calc(100vw-100%)] lg:mr-0 lg:w-full">
               <Image
                 src="/images/produccion-artesanal.png"
                 alt="Producción Artesanal de Helados San Marino"
@@ -128,16 +128,14 @@ export default function NosotrosPage() {
                 <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section className="bg-muted/30">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
-            {/* Mascot Image (Left side on desktop, last on mobile) */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-full">
+      <section className="bg-muted/30 px-0 lg:px-6">
+        <div className="flex flex-col lg:max-w-6xl lg:mx-auto lg:grid lg:grid-cols-2 gap-0 lg:items-center">
+          {/* Mascot Image (Left side on desktop, last on mobile) */}
+          <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-screen -mr-[calc(100vw-100%)] lg:mr-0 lg:w-full">
               <Image
                 src="/images/historia-san-marino.png"
                 alt="Mascota Helados San Marino"
@@ -148,8 +146,8 @@ export default function NosotrosPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
 
-            {/* Standards Checkmarks (Right side on desktop, first on mobile) */}
-            <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12">
+          {/* Standards Checkmarks (Right side on desktop, first on mobile) */}
+          <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12 px-6">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
@@ -172,7 +170,6 @@ export default function NosotrosPage() {
                 ))}
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
