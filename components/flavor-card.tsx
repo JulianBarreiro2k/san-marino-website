@@ -1,62 +1,64 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import type { Sabor } from '@/lib/data'
 
 export function FlavorCard({ sabor }: { sabor: Sabor }) {
-  const [showDescription, setShowDescription] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const titleRef = useRef<HTMLParagraphElement>(null)
+  const [titleHeight, setTitleHeight] = useState(24)
 
-  const toggleDescription = () => {
-    setShowDescription(!showDescription)
-  }
+  useEffect(() => {
+    if (!titleRef.current) return
+
+    // Using ResizeObserver to handle asynchronous font loading and layout shifts accurately
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        // Measure only the text content height of the title element
+        setTitleHeight(entry.target.clientHeight)
+      }
+    })
+
+    observer.observe(titleRef.current)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [sabor.nombre])
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-border transition-shadow hover:shadow-lg">
-      {/* Image and Description Overlay Container */}
-      <div
-        className="relative aspect-square overflow-hidden cursor-pointer"
-        onMouseEnter={() => setShowDescription(true)}
-        onMouseLeave={() => setShowDescription(false)}
-        onClick={toggleDescription}
-      >
-        {/* Image Layer */}
-        <div
-          className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
-            showDescription ? '-translate-y-full' : 'translate-y-0'
-          }`}
-        >
+    <article 
+      className={`card mx-auto cursor-pointer ${isOpen ? 'open' : ''}`}
+      onClick={() => setIsOpen(!isOpen)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      {/* Image Layer */}
+      <div className="card-image">
+        {sabor.imagen && (
           <Image
-            src={sabor.imagen || '/placeholder.svg'}
+            src={sabor.imagen}
             alt={`Helado de ${sabor.nombre}`}
             fill
             sizes="(max-width: 768px) 50vw, 25vw"
             className="object-cover"
           />
-        </div>
-
-        {/* Description Layer with Title */}
-        <div
-          className={`absolute inset-0 bg-card/95 backdrop-blur-sm p-6 flex flex-col justify-start pt-6 transition-transform duration-500 ease-in-out ${
-            showDescription ? 'translate-y-0' : 'translate-y-full'
-          }`}
-        >
-          <h3 className="text-lg font-bold text-card-foreground mb-4">{sabor.nombre}</h3>
-          <p className="text-sm leading-relaxed text-muted-foreground line-clamp-6">
-            {sabor.descripcion}
-          </p>
-        </div>
+        )}
       </div>
 
-      {/* Product Info Below - Only visible when image is shown */}
-      {!showDescription && (
-        <div className="flex flex-1 flex-col gap-1.5 p-5">
-          <h3 className="text-lg font-bold text-card-foreground">{sabor.nombre}</h3>
-          <p className="text-sm text-muted-foreground">
-            {sabor.tamaño && `${sabor.tamaño} de Helado`}
-          </p>
+      {/* Description Layer */}
+      <div 
+        className="card-description"
+        style={{
+          // Center the title vertically by having equal spacing on top (1rem padding) and bottom (1rem padding)
+          transform: isOpen ? 'translateY(0)' : `translateY(calc(100% - (${titleHeight}px + 2rem)))`
+        }}
+      >
+        <p ref={titleRef} className="text-title">{sabor.nombre}</p>
+        <div className="flex flex-col justify-center flex-grow min-h-0">
+          <p className="text-body">{sabor.descripcion}</p>
         </div>
-      )}
+      </div>
     </article>
   )
 }

@@ -63,7 +63,7 @@
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.92 0.01 0);
   --muted-foreground: oklch(0.4 0.035 195);
-  --accent: #70161e;
+  --accent: #7c1e26;
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.01 190);
@@ -99,3 +99,82 @@
     @apply font-serif;
   }
 }
+
+/* From Uiverse.io by alexruix */ 
+.card {
+  height: 254px;
+  width: 190px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  /* Fix Safari/Chrome overflow: hidden clip bug with rounded corners and translated children */
+  transform: translateZ(0);
+  isolation: isolate;
+  background-color: #eff1f1;
+}
+
+ /*Image*/
+.card-image {
+  height: 220px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translateY(0);
+}
+
+.card-image img {
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+/*Description */
+.card-description {
+  display: flex;
+  position: absolute;
+  gap: .5em;
+  flex-direction: column;
+  background-color: #eff1f1;
+  color: #000000;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 16px;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1rem;
+  transform: translateY(calc(100% - 52px));
+  text-align: center;
+}
+
+/*Text*/
+.text-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 130%;
+  color: #000000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover and Open states */
+.card:hover .card-description,
+.card.open .card-description {
+  transform: translateY(0) !important;
+}
+
+.card:hover .text-body,
+.card.open .text-body {
+  opacity: 1;
+}
+
+

@@ -22,8 +22,10 @@ export function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
@@ -48,6 +50,7 @@ export function SiteHeader() {
     if (href.includes('?')) {
       const [path, query] = href.split('?')
       if (pathname !== path) return false
+      if (!mounted) return false
       if (typeof window !== 'undefined') {
         return window.location.search.includes(query)
       }
