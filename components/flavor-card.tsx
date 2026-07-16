@@ -45,13 +45,6 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
             {sabor.descripcion}
           </p>
         </div>
-
-        {/* Title Overlay - Only visible when showing image */}
-        {!showDescription && (
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-transparent flex items-end p-4">
-            <h3 className="text-lg font-bold text-white">{sabor.nombre}</h3>
-          </div>
-        )}
       </div>
 
       {/* Product Info Below */}
