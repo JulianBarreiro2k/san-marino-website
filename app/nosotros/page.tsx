@@ -90,10 +90,10 @@ export default function NosotrosPage() {
 
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
             {/* Story Text - Left Half */}
-            <div className="space-y-8 py-8 lg:py-0 lg:pr-12">
+            <div className="space-y-8 py-8 lg:py-0 lg:pr-12 px-6">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground leading-tight font-sans">
@@ -113,7 +113,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Story Image - Right Half */}
-            <div className="relative aspect-square w-full overflow-hidden">
+            <div className="relative aspect-square w-screen lg:w-full overflow-hidden -mx-6 lg:mx-0">
               <Image
                 src="/images/produccion-artesanal.png"
                 alt="Producción Artesanal de Helados San Marino"
@@ -134,10 +134,10 @@ export default function NosotrosPage() {
 
       {/* Standards & Excellence Grid */}
       <section className="bg-muted/30">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
             {/* Mascot Image (Left side on desktop, last on mobile) */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-full">
+            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-screen lg:w-full -mx-0 lg:mx-0">
               <Image
                 src="/images/historia-san-marino.png"
                 alt="Mascota Helados San Marino"
@@ -149,7 +149,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Standards Checkmarks (Right side on desktop, first on mobile) */}
-            <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12">
+            <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12 px-6">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
