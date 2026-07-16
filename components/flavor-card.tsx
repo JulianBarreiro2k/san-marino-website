@@ -4,7 +4,7 @@ import type { Sabor } from '@/lib/data'
 export function FlavorCard({ sabor }: { sabor: Sabor }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-border transition-shadow hover:shadow-lg">
-      <div className="relative aspect-[4/5] overflow-hidden">
+      <div className="relative aspect-square overflow-hidden">
         <Image
           src={sabor.imagen || '/placeholder.svg'}
           alt={`Helado de ${sabor.nombre}`}

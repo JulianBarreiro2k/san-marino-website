@@ -1,9 +1,7 @@
 'use client'
 
 import { useState, useEffect, Suspense } from 'react'
-import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
-import { Info, MapPin } from 'lucide-react'
 import { FlavorCard } from '@/components/flavor-card'
 import { PALITOS, POSTRES, SABORES_AGUA, SABORES_CREMA } from '@/lib/data'
 
@@ -95,22 +93,7 @@ function ProductosContent() {
         </div>
       </section>
 
-      {/* Note + CTA */}
-      <section className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center md:px-6">
-        <div className="flex max-w-2xl items-start gap-3 rounded-3xl bg-card p-6 text-left shadow-sm ring-1 ring-border">
-          <Info className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
-          <p className="leading-relaxed text-muted-foreground">
-            {'Consultá en las sucursales por otros gustos del día: siempre hay nuevos sabores de temporada y el clásico "sabor de la semana".'}
-          </p>
-        </div>
-        <Link
-          href="/sucursales"
-          className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 font-bold text-accent-foreground shadow-md transition-transform hover:scale-105"
-        >
-          <MapPin className="size-5" aria-hidden="true" />
-          Encontrá tu sucursal más cercana
-        </Link>
-      </section>
+
     </>
   )
 }
