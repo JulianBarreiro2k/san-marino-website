@@ -46,17 +46,26 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           </p>
         </div>
 
-        {/* Title Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-transparent flex items-end p-4">
-          <h3 className="text-lg font-bold text-white">{sabor.nombre}</h3>
-        </div>
+        {/* Title Overlay - Only visible when showing image */}
+        {!showDescription && (
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-transparent flex items-end p-4">
+            <h3 className="text-lg font-bold text-white">{sabor.nombre}</h3>
+          </div>
+        )}
       </div>
 
       {/* Product Info Below */}
       <div className="flex flex-1 flex-col gap-1.5 p-5">
-        <p className="text-sm text-muted-foreground">
-          {sabor.tamaño && `${sabor.tamaño} de Helado`}
-        </p>
+        <h3 className="text-lg font-bold text-card-foreground">{sabor.nombre}</h3>
+        {showDescription ? (
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            {sabor.descripcion}
+          </p>
+        ) : (
+          <p className="text-sm text-muted-foreground">
+            {sabor.tamaño && `${sabor.tamaño} de Helado`}
+          </p>
+        )}
       </div>
     </article>
   )
