@@ -171,7 +171,6 @@ export default function NosotrosPage() {
                 ))}
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
