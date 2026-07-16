@@ -134,10 +134,9 @@ export default function NosotrosPage() {
 
       {/* Standards & Excellence Grid */}
       <section className="bg-muted/30">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
-            {/* Mascot Image (Left side on desktop, last on mobile) */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-full lg:w-full -ml-6 lg:ml-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+          {/* Mascot Image (Left side on desktop, last on mobile) */}
+          <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-screen lg:w-full -mx-6 lg:mx-0 lg:max-w-6xl lg:mx-auto">
               <Image
                 src="/images/historia-san-marino.png"
                 alt="Mascota Helados San Marino"
@@ -148,8 +147,8 @@ export default function NosotrosPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
             </div>
 
-            {/* Standards Checkmarks (Right side on desktop, first on mobile) */}
-            <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12 px-6">
+          {/* Standards Checkmarks (Right side on desktop, first on mobile) */}
+          <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12 px-6 mx-auto max-w-6xl w-full lg:w-auto">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
