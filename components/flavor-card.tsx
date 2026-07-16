@@ -50,15 +50,9 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
       {/* Product Info Below */}
       <div className="flex flex-1 flex-col gap-1.5 p-5">
         <h3 className="text-lg font-bold text-card-foreground">{sabor.nombre}</h3>
-        {showDescription ? (
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            {sabor.descripcion}
-          </p>
-        ) : (
-          <p className="text-sm text-muted-foreground">
-            {sabor.tamaño && `${sabor.tamaño} de Helado`}
-          </p>
-        )}
+        <p className="text-sm text-muted-foreground">
+          {sabor.tamaño && `${sabor.tamaño} de Helado`}
+        </p>
       </div>
     </article>
   )
