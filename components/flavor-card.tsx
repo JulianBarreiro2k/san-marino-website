@@ -35,25 +35,28 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           />
         </div>
 
-        {/* Description Layer */}
+        {/* Description Layer with Title */}
         <div
-          className={`absolute inset-0 bg-card/95 backdrop-blur-sm p-6 flex flex-col justify-center transition-transform duration-500 ease-in-out ${
+          className={`absolute inset-0 bg-card/95 backdrop-blur-sm p-6 flex flex-col justify-start pt-6 transition-transform duration-500 ease-in-out ${
             showDescription ? 'translate-y-0' : 'translate-y-full'
           }`}
         >
+          <h3 className="text-lg font-bold text-card-foreground mb-4">{sabor.nombre}</h3>
           <p className="text-sm leading-relaxed text-muted-foreground line-clamp-6">
             {sabor.descripcion}
           </p>
         </div>
       </div>
 
-      {/* Product Info Below */}
-      <div className="flex flex-1 flex-col gap-1.5 p-5">
-        <h3 className="text-lg font-bold text-card-foreground">{sabor.nombre}</h3>
-        <p className="text-sm text-muted-foreground">
-          {sabor.tamaño && `${sabor.tamaño} de Helado`}
-        </p>
-      </div>
+      {/* Product Info Below - Only visible when image is shown */}
+      {!showDescription && (
+        <div className="flex flex-1 flex-col gap-1.5 p-5">
+          <h3 className="text-lg font-bold text-card-foreground">{sabor.nombre}</h3>
+          <p className="text-sm text-muted-foreground">
+            {sabor.tamaño && `${sabor.tamaño} de Helado`}
+          </p>
+        </div>
+      )}
     </article>
   )
 }
