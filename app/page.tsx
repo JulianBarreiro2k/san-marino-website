@@ -44,7 +44,7 @@ const CATEGORIAS = [
     titulo: 'Nuestros Productos',
     texto: 'Helados a la crema, al agua, palitos y postres artesanales.',
     href: '/productos',
-    imagen: '/images/cucurucho.png',
+    imagen: '/images/helado_cucurucho.jpg',
     cta: 'Ver sabores',
   },
   {
@@ -58,7 +58,7 @@ const CATEGORIAS = [
     titulo: 'Delivery',
     texto: 'Te llevamos el helado de tu vida a casa. Llamá a tu zona.',
     href: '/sucursales#delivery',
-    imagen: '/images/hero-dulce-de-leche.png',
+    imagen: '/images/helado 1kg.jpg',
     cta: 'Pedir ahora',
   },
 ]
@@ -79,7 +79,7 @@ export default function HomePage() {
         />
         {/* Background Image - Desktop */}
         <Image
-          src="/images/hero-desktop.jpg"
+          src="/images/hero-desktop.png"
           alt="Helados San Marino"
           fill
           priority
@@ -187,7 +187,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 h-fit gap-0 md:gap-0">
             {/* Left side - Text */}
-            <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
+            <div className="flex flex-col justify-center px-6 md:px-12 py-8 md:py-0 text-center md:text-left items-center md:items-start">
               <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground mb-6">
                 Conoce Nuestra Historia
               </h2>

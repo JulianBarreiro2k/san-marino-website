@@ -47,10 +47,10 @@ export default function NosotrosPage() {
   ]
 
   const standards = [
-    'Materia prima 100% seleccionada: frutas frescas y chocolates importados.',
-    'Proceso de producción certificado bajo estrictas normas de higiene y seguridad.',
-    'Elaboración diaria para asegurar la máxima frescura y textura aterciopelada.',
-    'Sin colorantes artificiales ni aditivos innecesarios, sabor genuino e inconfundible.'
+    'Materia prima seleccionada: frutas frescas y chocolates importados.',
+    'Producción certificada bajo estrictas normas de higiene.',
+    'Elaboración diaria para asegurar la máxima frescura y textura.',
+    'Sin colorantes ni aditivos artificiales, sabor 100% genuino.'
   ]
 
   return (
@@ -90,12 +90,10 @@ export default function NosotrosPage() {
 
       {/* Story Section */}
       <section id="historia" className="scroll-mt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* Wrapper for text with padding */}
-          <div className="mx-auto max-w-6xl px-6 lg:p-0 w-full">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
             {/* Story Text - Left Half */}
-            <div className="py-12 md:py-0 flex items-center lg:aspect-square" style={{ backgroundColor: '#FFFFFF' }}>
-            <div className="space-y-8">
+            <div className="space-y-8 py-8 lg:py-0 lg:pr-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">La Tradición Continúa</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground leading-tight font-sans">
@@ -104,7 +102,7 @@ export default function NosotrosPage() {
                 </h2>
               </div>
               
-              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed lg:pr-12">
+              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
                 <p className="border-l-4 border-accent pl-4 font-medium italic text-foreground">
                   &ldquo;Desde 1985, elaboramos helados artesanales con recetas familiares y pasión.&rdquo;
                 </p>
@@ -113,46 +111,45 @@ export default function NosotrosPage() {
                 </p>
               </div>
             </div>
-          </div>
-          </div>
 
-          {/* Story Image - Right Half, Full Height */}
-          <div className="relative aspect-square lg:aspect-auto w-full overflow-hidden">
-            <Image
-              src="/images/produccion-artesanal.png"
-              alt="Producción Artesanal de Helados San Marino"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-700 hover:scale-105"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-              <span className="text-accent font-bold text-xs uppercase tracking-widest mb-2">100% Calidad</span>
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-2 font-sans">Elaboración propia</h3>
-              <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
+            {/* Story Image - Right Half */}
+            <div className="relative aspect-square w-full overflow-hidden">
+              <Image
+                src="/images/produccion-artesanal.png"
+                alt="Producción Artesanal de Helados San Marino"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                <span className="text-white font-bold text-xs uppercase tracking-widest mb-2">100% Calidad</span>
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-2 font-sans">Elaboración propia</h3>
+                <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-0">
-          {/* Desktop version - Left side: Mascot Image */}
-          <div className="hidden lg:flex relative aspect-square overflow-hidden shadow-2xl group">
-            <Image
-              src="/images/historia-san-marino.png"
-              alt="Mascota Helados San Marino"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
-          </div>
+      <section className="bg-muted/30">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+            {/* Mascot Image (Left side on desktop, last on mobile) */}
+            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-full">
+              <Image
+                src="/images/historia-san-marino.png"
+                alt="Mascota Helados San Marino"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
+            </div>
 
-          {/* Right side: Standards Checkmarks */}
-          <div className="mx-auto max-w-6xl px-6 w-full py-12 lg:py-0">
-            <div className="space-y-8 lg:pl-12">
+            {/* Standards Checkmarks (Right side on desktop, first on mobile) */}
+            <div className="space-y-8 order-first lg:order-last py-8 lg:py-0 lg:pl-12">
               <div className="space-y-4">
                 <span className="text-accent font-bold uppercase tracking-widest text-sm block">Excelencia Garantizada</span>
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-foreground font-sans">
@@ -160,7 +157,7 @@ export default function NosotrosPage() {
                   <span className="text-primary">estrictas normas</span>
                 </h2>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                  Cada lote es cuidado con estrictas normas de higiene y control de calidad para garantizar un helado puro, fresco y con textura perfecta.
+                  Elaboramos cada sabor bajo rigurosos controles de calidad e higiene para ofrecerte un helado siempre puro y fresco.
                 </p>
               </div>
 
@@ -176,21 +173,6 @@ export default function NosotrosPage() {
               </ul>
             </div>
           </div>
-
-          {/* Mobile version - appears after text */}
-          <div className="lg:hidden">
-            {/* Left side: Mascot Image */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group">
-              <Image
-                src="/images/historia-san-marino.png"
-                alt="Mascota Helados San Marino"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/45 to-transparent blend-multiply" />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -198,7 +180,7 @@ export default function NosotrosPage() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden text-white shadow-2xl" style={{
-        backgroundImage: 'url(/images/helado-fondo.png)',
+        backgroundImage: 'url(/images/disfruta_artesanal.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

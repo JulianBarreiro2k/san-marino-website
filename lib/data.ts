@@ -105,88 +105,117 @@ export type Sabor = {
 
 export const SABORES_CREMA: Sabor[] = [
   {
-    nombre: 'Dulce de Leche',
-    descripcion: 'El clásico de la casa, cremoso y con dulce de leche natural.',
-    imagen: '/images/helado-dulce-de-leche.jpg',
+    nombre: '1 Kilo y Medio',
+    descripcion: '1 Kilo y Medio de Helado.',
+    imagen: '/images/helado 1kg+0.5kg.jpg',
   },
   {
-    nombre: 'Chocolate',
-    descripcion: 'Intenso, con cacao de primera calidad y trozos de chocolate.',
-    imagen: '/images/helado-chocolate.jpg',
+    nombre: 'Helado 1/4 kg',
+    descripcion: 'Hasta tres sabores a elección.',
+    imagen: '/images/helado 0.25kg.jpg',
   },
   {
-    nombre: 'Vainilla',
-    descripcion: 'Clásico y aromático, elaborado con vainilla de primera calidad.',
-    imagen: '/images/helado-vainilla.jpg',
+    nombre: 'Helado 1/2 kg',
+    descripcion: 'Hasta tres sabores a elección.',
+    imagen: '/images/helado 0.5kg.jpg',
   },
   {
-    nombre: 'Açaí',
-    descripcion:
-      'Refrescante, suave y con ese sabor único que te transporta directo a Brasil.',
-    imagen: '/images/sabor-acai.png',
+    nombre: 'Helado 1 Kg',
+    descripcion: 'Hasta cuatro sabores a elección.',
+    imagen: '/images/helado 1kg.jpg',
   },
 ]
 
 export const SABORES_AGUA: Sabor[] = [
   {
-    nombre: 'Mango',
-    descripcion:
-      'Helado de agua de mango natural, fresco y tropical, con veteado de mango.',
-    imagen: '/images/sabor-mango.png',
+    nombre: 'Vasito de pasta',
+    descripcion: 'vasito de pasta.',
+    imagen: '/images/vasito_pasta.jpg',
   },
   {
-    nombre: 'Frutilla',
-    descripcion: 'Frutal, natural y liviano. El sabor del verano marplatense.',
-    imagen: '/images/helado-frutilla.jpg',
+    nombre: 'Cucurucho',
+    descripcion: 'Barquillo.',
+    imagen: '/images/helado_cucurucho.jpg',
   },
 ]
 
 export const POSTRES: Sabor[] = [
   {
-    nombre: 'Almendrado',
-    descripcion:
-      'Helado de crema americana con almendras, recubierto de garrapiñada.',
-    imagen: '/images/almendrado.png',
-  },
-
-  {
     nombre: 'Bombón Suizo',
     descripcion:
-      'Bocado de helado bañado en chocolate con crema y guinda.',
-    imagen: '/images/bombon-suizo.png',
+      'Base de pionono con helado de crema americana, corazón de dulce de leche natural, bañado en chocolate, decorado con crema y una guinda.',
+    imagen: '/images/postre_bombon_suizo.jpg',
   },
   {
     nombre: 'Bombón Escocés',
     descripcion:
-      'Helado bañado en chocolate con dulce de leche y almendra.',
-    imagen: '/images/bombon-escoces.png',
+      'Base de pionono con helado de chocolate, corazón de dulce de leche natural, bañado en chocolate y decorado con una almendra.',
+    imagen: '/images/postre_bombon_escoces.jpg',
+  },
+  {
+    nombre: 'Postre Cassata',
+    descripcion:
+      'Helado de crema americana, chocolate y frutilla a la crema cubierto con pionono bañado en chocolate.',
+    imagen: '/images/postre_casatta.jpg',
+  },
+  {
+    nombre: 'Postre Almendrado',
+    descripcion:
+      'Helado de crema americana con almendras tostadas cubierto con crocante de maní y almendras.',
+    imagen: '/images/postre_almendrado.jpg',
+  },
+  {
+    nombre: 'Cubatones',
+    descripcion:
+      'Oblea rellena de helado de crema americana, chocolate o dulce de leche con crocante y bañado en chocolate.',
+    imagen: '/images/postre_cubaton.jpg',
   },
 ]
 
 export const PALITOS: Sabor[] = [
   {
-    nombre: 'Palito al Agua',
-    descripcion: 'Frutales naturales: frutilla, limón y naranja.',
-    imagen: '/images/palito-agua.png',
+    nombre: 'Palito Bañado',
+    descripcion: 'Helado en palito de sabor americana, chocolate, dulce de leche, frutilla o menta.',
+    imagen: '/images/palito_bombon.jpg',
   },
   {
-    nombre: 'Palito a la Crema',
-    descripcion: 'Bañados en chocolate con pistacho, almendra o maní.',
-    imagen: '/images/palito-crema.png',
+    nombre: 'Palito de Agua',
+    descripcion: 'Helado en palito de sabores ananá al agua, frutilla al agua o limón al agua.',
+    imagen: '/images/palito_frutilla.jpg',
+  },
+  {
+    nombre: 'Palito Kinder Bueno',
+    descripcion: 'Helado sabor kinder bueno bañado en chocolate con leche.',
+    imagen: '/images/palito_kinder.jpg',
+  },
+  {
+    nombre: 'Palito Dubái',
+    descripcion: 'Helado de chocolate con crema de pistacho crocante, bañado en chocolate cubierto con crocante de pistacho.',
+    imagen: '/images/palito_pistacho.jpg',
   },
   {
     nombre: 'Patita',
     descripcion:
       'Helado de dulce de leche con corazón de dulce de leche natural bañado en chocolate con leche.',
-    imagen: '/images/patita.png',
+    imagen: '/images/paleta_patita.jpg',
+  },
+  {
+    nombre: 'Carita Cielo',
+    descripcion: 'Helado de crema del cielo bañado en chocolate blanco.',
+    imagen: '/images/paleta_carita.jpg',
+  },
+  {
+    nombre: 'Carita Kinder',
+    descripcion: 'Helado sabor a huevo kinder con trocitos de huevo kinder bañado en chocolate con leche.',
+    imagen: '/images/paleta_carita_chocolate.jpg',
   },
 ]
 
 export const INSTAGRAM_GRID = [
-  { src: '/images/sabor-acai.png', alt: 'Nuevo gusto Açaí' },
-  { src: '/images/sabor-yuzu.png', alt: 'Nuevo gusto Yuzu' },
-  { src: '/images/sabor-mango.png', alt: 'Nuevo gusto Mango' },
-  { src: '/images/palito-crema.png', alt: 'Palitos a la crema' },
-  { src: '/images/patita.png', alt: 'Patita de dulce de leche' },
-  { src: '/images/bombon-suizo.png', alt: 'Bombón Suizo' },
+  { src: '/images/helado_cucurucho.jpg', alt: 'Helado Cucurucho' },
+  { src: '/images/paleta_patita.jpg', alt: 'Patita' },
+  { src: '/images/postre_cubaton.jpg', alt: 'Cubatones' },
+  { src: '/images/palito_pistacho.jpg', alt: 'Palito Dubái' },
+  { src: '/images/postre_almendrado.jpg', alt: 'Postre Almendrado' },
+  { src: '/images/paleta_carita.jpg', alt: 'Carita Cielo' },
 ]

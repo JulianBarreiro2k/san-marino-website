@@ -31,9 +31,10 @@ export function ProductsCarousel({ title, items, viewAllHref }: ProductsCarousel
         </h3>
         <Link
           href={viewAllHref}
-          className="text-sm font-bold text-primary hover:underline transition-all"
+          className="inline-flex items-center gap-1 rounded-full bg-primary hover:bg-primary/90 px-4 py-2 text-xs font-normal text-white transition-all hover:scale-105 active:scale-95 shadow-sm"
         >
           Ver todos
+          <ChevronRight className="size-3.5" strokeWidth={3} />
         </Link>
       </div>
 
@@ -46,12 +47,12 @@ export function ProductsCarousel({ title, items, viewAllHref }: ProductsCarousel
         >
           {items.map((item) => (
             <div key={item.nombre} className="flex-shrink-0 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] snap-start">
-              <div className="relative rounded-lg overflow-hidden bg-muted">
+              <div className="relative rounded-lg overflow-hidden bg-muted aspect-square">
                 {item.imagen && (
                   <img
                     src={item.imagen}
                     alt={item.nombre}
-                    className="w-full h-auto"
+                    className="w-full h-full object-cover"
                   />
                 )}
               </div>
