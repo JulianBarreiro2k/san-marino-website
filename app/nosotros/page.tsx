@@ -113,7 +113,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Story Image - Right Half */}
-            <div className="relative aspect-square w-screen lg:w-full overflow-hidden -mx-6 lg:mx-0">
+            <div className="relative aspect-square w-full lg:w-full overflow-hidden -mr-6 lg:mr-0">
               <Image
                 src="/images/produccion-artesanal.png"
                 alt="Producción Artesanal de Helados San Marino"
@@ -137,7 +137,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
             {/* Mascot Image (Left side on desktop, last on mobile) */}
-            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-screen lg:w-full -mx-0 lg:mx-0">
+            <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-full lg:w-full -ml-6 lg:ml-0">
               <Image
                 src="/images/historia-san-marino.png"
                 alt="Mascota Helados San Marino"
