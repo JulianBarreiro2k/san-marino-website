@@ -107,7 +107,7 @@ export const SABORES_CREMA: Sabor[] = [
   {
     nombre: '1 Kilo y Medio',
     descripcion: '1 Kilo y Medio de Helado.',
-    imagen: '/images/helado 1kg+0.5kg.jpg',
+    imagen: '/images/helado_1kg_y_medio.jpg',
   },
   {
     nombre: 'Helado 1/4 kg',
