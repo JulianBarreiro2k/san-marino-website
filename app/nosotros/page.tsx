@@ -89,9 +89,9 @@ export default function NosotrosPage() {
       </section>
 
       {/* Story Section */}
-      <section id="historia" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+      <section id="historia" className="scroll-mt-20 overflow-hidden">
+        <div className="flex flex-col lg:max-w-6xl lg:mx-auto lg:grid lg:grid-cols-2 gap-0 lg:items-center">
+
             {/* Story Text - Left Half */}
             <div className="space-y-8 py-8 lg:py-0 lg:pr-12 px-6">
               <div className="space-y-4">
@@ -113,7 +113,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Story Image - Right Half */}
-            <div className="relative aspect-square w-full lg:w-full overflow-hidden -mr-6 lg:mr-0">
+            <div className="relative aspect-square w-full overflow-hidden ml-[calc(-50vw+50%)] mr-[calc(-50vw+50%)] lg:mx-0 lg:w-full">
               <Image
                 src="/images/produccion-artesanal.png"
                 alt="Producción Artesanal de Helados San Marino"
@@ -128,15 +128,14 @@ export default function NosotrosPage() {
                 <p className="text-sm text-gray-300">Cada lote es supervisado por maestros heladeros que custodian el sabor familiar.</p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Standards & Excellence Grid */}
-      <section className="bg-muted/30">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center lg:mx-auto lg:max-w-6xl">
+      <section className="bg-muted/30 px-0 lg:px-6">
+        <div className="flex flex-col lg:max-w-6xl lg:mx-auto lg:grid lg:grid-cols-2 gap-0 lg:items-center">
           {/* Mascot Image (Left side on desktop, last on mobile) */}
-          <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-screen lg:w-full -mx-6 lg:mx-0">
+          <div className="relative aspect-square overflow-hidden shadow-2xl group order-last lg:order-first w-full ml-[calc(-50vw+50%)] mr-[calc(-50vw+50%)] lg:mx-0 lg:w-full">
               <Image
                 src="/images/historia-san-marino.png"
                 alt="Mascota Helados San Marino"
