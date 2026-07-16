@@ -23,7 +23,7 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
         {/* Image Layer */}
         <div
           className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
-            showDescription ? '-translate-x-full' : 'translate-x-0'
+            showDescription ? '-translate-y-full' : 'translate-y-0'
           }`}
         >
           <Image
@@ -38,7 +38,7 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
         {/* Description Layer */}
         <div
           className={`absolute inset-0 bg-card/95 backdrop-blur-sm p-6 flex flex-col justify-center transition-transform duration-500 ease-in-out ${
-            showDescription ? 'translate-x-0' : 'translate-x-full'
+            showDescription ? 'translate-y-0' : 'translate-y-full'
           }`}
         >
           <p className="text-sm leading-relaxed text-muted-foreground line-clamp-6">
