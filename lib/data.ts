@@ -27,32 +27,6 @@ export type Zona = {
 
 export const ZONAS: Zona[] = [
   {
-    id: 'centro-guemes',
-    nombre: 'Zona Centro / Güemes',
-    telefono: '494-9455',
-    telefonoHref: 'tel:+542234949455',
-    sucursales: [
-      {
-        direccion: 'Córdoba 1621',
-        mapsQuery: 'Córdoba 1621, Mar del Plata',
-        imagen: '/images/local-cordoba-1621.png',
-        horarios: [
-          { dias: 'Domingo a jueves', hora: '11 a 0 h' },
-          { dias: 'Viernes y sábado', hora: '11 a 1 h' },
-        ],
-      },
-      {
-        direccion: 'Olavarría esq. Alvarado',
-        mapsQuery: 'Olavarría y Alvarado, Mar del Plata',
-        imagen: '/images/local-olavarria-alvarado.png',
-        horarios: [
-          { dias: 'Domingo a jueves', hora: '11 a 1 h' },
-          { dias: 'Viernes y sábado', hora: '11 a 2 h' },
-        ],
-      },
-    ],
-  },
-  {
     id: 'constitucion',
     nombre: 'Zona Constitución',
     telefono: '471-6757',
@@ -74,6 +48,40 @@ export const ZONAS: Zona[] = [
         horarios: [
           { dias: 'Domingo a jueves', hora: '11 a 0:30 h' },
           { dias: 'Viernes y sábado', hora: '11 a 1:30 h' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'centro',
+    nombre: 'Zona Centro',
+    telefono: '494-9455',
+    telefonoHref: 'tel:+542234949455',
+    sucursales: [
+      {
+        direccion: 'Córdoba 1621',
+        mapsQuery: 'Córdoba 1621, Mar del Plata',
+        imagen: '/images/local-cordoba-1621.png',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 0 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 1 h' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'guemes',
+    nombre: 'Zona Güemes',
+    telefono: '494-9455',
+    telefonoHref: 'tel:+542234949455',
+    sucursales: [
+      {
+        direccion: 'Olavarría esq. Alvarado',
+        mapsQuery: 'Olavarría y Alvarado, Mar del Plata',
+        imagen: '/images/local-olavarria-alvarado.png',
+        horarios: [
+          { dias: 'Domingo a jueves', hora: '11 a 1 h' },
+          { dias: 'Viernes y sábado', hora: '11 a 2 h' },
         ],
       },
     ],

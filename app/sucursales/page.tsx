@@ -43,7 +43,7 @@ export default function SucursalesPage() {
             aria-labelledby={`zona-${zona.id}`}
           >
             <h2 id={`zona-${zona.id}`} className="text-xl font-bold md:text-2xl">
-              {zona.nombre.toUpperCase()} <span className="text-muted-foreground">| {zona.sucursales.length} {zona.sucursales.length === 1 ? 'Sucursal' : 'Sucursales'}</span>
+              {zona.nombre.toUpperCase()} {zona.sucursales.length > 1 && <span className="text-muted-foreground">| {zona.sucursales.length} Sucursales</span>}
             </h2>
 
             <ul className="grid gap-6 md:grid-cols-2">
