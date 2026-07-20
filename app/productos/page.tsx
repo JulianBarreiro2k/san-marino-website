@@ -8,6 +8,7 @@ import { PALITOS, POSTRES, SABORES_AGUA, SABORES_CREMA, LISTADO_SABORES } from '
 // Expandable flavor item component
 function ExpandableFlavorItem({ sabor, accentColor }: { sabor: string; accentColor: string }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
   const itemRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
@@ -21,14 +22,31 @@ function ExpandableFlavorItem({ sabor, accentColor }: { sabor: string; accentCol
   return (
     <div
       ref={itemRef}
-      className={`rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer ${
+      className={`rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer group ${
         isOpen ? 'col-span-2 sm:col-span-3 lg:col-span-4' : ''
-      }`}
+      } ${isHovered && !isOpen ? 'scale-105 shadow-lg' : ''}`}
       onClick={() => setIsOpen(!isOpen)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
     >
-      <div className={`bg-[#eff1f1] rounded-2xl p-4 flex items-center justify-center text-center transition-all duration-300 ${!isOpen ? 'h-auto' : ''}`}>
+      <style>{`
+        @keyframes cardPulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+        }
+        .flavor-card-hover {
+          animation: cardPulse 0.6s ease-in-out;
+        }
+      `}</style>
+      <div 
+        className={`bg-[#eff1f1] rounded-2xl p-4 flex items-center justify-center text-center transition-all duration-500 ${
+          !isOpen ? 'h-auto' : ''
+        } ${isHovered && !isOpen ? 'flavor-card-hover bg-gradient-to-br from-[#eff1f1] to-[#e5ebe6]' : ''}`}
+      >
         {!isOpen ? (
-          <span className="text-title text-sm sm:text-base text-black">
+          <span className={`text-title text-sm sm:text-base text-black transition-all duration-500 ${isHovered ? 'font-bold tracking-wider' : ''}`}>
             {sabor}
           </span>
         ) : (
