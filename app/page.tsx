@@ -94,7 +94,7 @@ export default function HomePage() {
             <h1 className="text-balance text-center md:text-left text-5xl font-black md:text-7xl uppercase tracking-tight leading-none">
               Los mejores
               <br />
-              <span className="text-white">helados artesanales</span>
+              <span style={{ color: '#CCE3D1' }}>helados artesanales</span>
             </h1>
             <p className="max-w-xl text-balance text-center md:text-left text-lg md:text-xl font-medium text-foreground mt-4">
               {'El helado de tu vida, elaborado de manera artesanal.'}
