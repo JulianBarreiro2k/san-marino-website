@@ -54,9 +54,6 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           transform: isOpen ? 'translateY(0)' : `translateY(calc(100% - (${titleHeight}px + 2rem)))`
         }}
       >
-        <div className="flex flex-col items-center gap-1 -mb-2">
-          <span className={`text-xs transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-60'}`}>^</span>
-        </div>
         <p ref={titleRef} className="text-title">{sabor.nombre}</p>
         <div className="flex flex-col justify-center flex-grow min-h-0">
           <p className="text-body">{sabor.descripcion}</p>
