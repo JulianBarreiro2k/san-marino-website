@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import type { Sabor } from '@/lib/data'
+import { ChevronDown } from 'lucide-react'
 
 export function FlavorCard({ sabor }: { sabor: Sabor }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -45,7 +46,15 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           />
         )}
       </div>
-
+      {/* Toggle indicator */}
+      <div
+        className="card-toggle"
+        style={{
+          top: isOpen ? 0 : `calc(100% - (${titleHeight}px + 2rem))`,
+        }}
+      >
+        <ChevronDown size={14} strokeWidth={2.5} color="#000" />
+      </div>
       {/* Description Layer */}
       <div 
         className="card-description"
