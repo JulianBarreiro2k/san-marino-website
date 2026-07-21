@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import type { Sabor } from '@/lib/data'
-import { ChevronDown } from 'lucide-react'
+import { ChevronUp } from 'lucide-react'
 
 export function FlavorCard({ sabor }: { sabor: Sabor }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,15 +46,6 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           />
         )}
       </div>
-      {/* Toggle indicator */}
-      <div
-        className="card-toggle"
-        style={{
-          top: isOpen ? 0 : `calc(100% - (${titleHeight}px + 2rem))`,
-        }}
-      >
-        <ChevronDown size={14} strokeWidth={2.5} color="#000" />
-      </div>
       {/* Description Layer */}
       <div 
         className="card-description"
@@ -63,6 +54,22 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           transform: isOpen ? 'translateY(0)' : `translateY(calc(100% - (${titleHeight}px + 2rem)))`
         }}
       >
+        {/* Toggle indicator (triangular tab with rounded top) */}
+        <div className="card-toggle-container">
+          <svg
+            width="36"
+            height="18"
+            viewBox="0 0 36 18"
+            className="card-toggle-triangle-svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M 0 18 L 13 4 Q 18 0 23 4 L 36 18 Z"
+              fill="#eff1f1"
+            />
+          </svg>
+          <ChevronUp size={20} strokeWidth={2.5} color="#363636ff" className="card-toggle-arrow" />
+        </div>
         <p ref={titleRef} className="text-title">{sabor.nombre}</p>
         <div className="flex flex-col justify-center flex-grow min-h-0">
           <p className="text-body">{sabor.descripcion}</p>
@@ -71,3 +78,7 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
     </article>
   )
 }
+
+
+
+

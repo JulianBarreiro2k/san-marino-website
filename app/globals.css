@@ -167,40 +167,86 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.card-toggle {
+.card-toggle-container {
   position: absolute;
+  top: 2px;
   left: 50%;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #eff1f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
+  width: 36px;
+  height: 18px;
   z-index: 3;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.08);
   pointer-events: none;
-  transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.card-toggle svg {
-  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+.card-toggle-triangle-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 18px;
+  display: block;
 }
 
-.card.open .card-toggle svg {
-  transform: rotate(180deg);
+.card-toggle-arrow {
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Hover and Open states */
-.card:hover .card-description,
+
+
+
+
+
 .card.open .card-description {
   transform: translateY(0) !important;
 }
 
-.card:hover .text-body,
 .card.open .text-body {
   opacity: 1;
 }
+
+/* Restore hover only on devices that support hover pointer (desktops) */
+@media (hover: hover) {
+  .card:hover .card-description {
+    transform: translateY(0) !important;
+  }
+
+  .card:hover .text-body {
+    opacity: 1;
+  }
+}
+
+/* Smooth curtain height and opacity transition for flavor cards */
+.flavor-card-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  overflow: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flavor-card-dropdown.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* Base styling for flavors-grid to support transition on close */
+.flavors-grid {
+  padding-bottom: 0;
+  transition: padding-bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dynamically add bottom padding to grid ONLY when a flavor card in the last row (last 4 items) is open */
+.flavors-grid:has(> .open:nth-last-child(-n+4)) {
+  padding-bottom: 140px;
+}
+
+
+
+
+
+
 
 

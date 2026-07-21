@@ -96,7 +96,7 @@ export default function HomePage() {
               <br />
               <span style={{ color: '#BBCCA7' }}>helados artesanales</span>
             </h1>
-            <p className="max-w-xl text-balance text-center md:text-left text-lg md:text-xl font-medium text-foreground mt-4">
+            <p className="max-w-xl text-balance text-center md:text-left text-lg md:text-xl font-medium text-white mt-4">
               {'El helado de tu vida, elaborado de manera artesanal.'}
             </p>
             <div className="flex flex-nowrap gap-3 mt-6 justify-center md:justify-start">
