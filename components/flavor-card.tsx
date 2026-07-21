@@ -63,6 +63,11 @@ export function FlavorCard({ sabor }: { sabor: Sabor }) {
           transform: isOpen ? 'translateY(0)' : `translateY(calc(100% - (${titleHeight}px + 2rem)))`
         }}
       >
+        <div className={`flex justify-center transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-60'}`}>
+          <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 5L6 1L11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
         <p ref={titleRef} className="text-title">{sabor.nombre}</p>
         <div className="flex flex-col justify-center flex-grow min-h-0">
           <p className="text-body">{sabor.descripcion}</p>
