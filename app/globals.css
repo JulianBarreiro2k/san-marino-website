@@ -167,6 +167,31 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+.card-toggle {
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #eff1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.card-toggle svg {
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.card.open .card-toggle svg {
+  transform: rotate(180deg);
+}
+
 /* Hover and Open states */
 .card:hover .card-description,
 .card.open .card-description {
