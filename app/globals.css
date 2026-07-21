@@ -147,6 +147,7 @@
   padding: 1rem;
   transform: translateY(calc(100% - 52px));
   text-align: center;
+  clip-path: polygon(0 6px, calc(50% - 6px) 6px, 50% 0, calc(50% + 6px) 6px, 100% 6px, 100% 100%, 0 100%);
   justify-content: center;
 }
 
