@@ -32,8 +32,8 @@ function ExpandableFlavorItem({ sabor }: { sabor: string }) {
       >
         <div className="overflow-hidden">
           <div className="p-4 pt-4">
-            <p className="text-black text-base leading-[1.3] text-center">
-              Descubre el delicioso sabor de {sabor.toLowerCase()}, elaborado con ingredientes premium seleccionados por nuestros maestros heladeros. Una experiencia única en cada cucharada.
+            <p className="text-black text-sm md:text-base leading-[1.3] text-center">
+              Delicioso sabor a {sabor.toLowerCase()}, elaborado artesanalmente con ingredientes premium seleccionados.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ function ProductosContent() {
             <button
               key={tab.id}
               onClick={() => handleTabChange(tab.id)}
-              className={`relative px-6 py-4 text-xs font-bold tracking-widest transition-colors duration-200 ${
+              className={`relative px-3 sm:px-6 py-4 text-[11px] sm:text-xs font-bold tracking-wider sm:tracking-widest transition-colors duration-200 ${
                 activeTab === tab.id
                   ? 'text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
@@ -207,7 +207,7 @@ function ProductosContent() {
                     <button
                       key={subTab.id}
                       onClick={() => setActiveSubTab(subTab.id)}
-                      className={`relative px-3 sm:px-6 py-4 text-xs font-bold tracking-widest transition-colors duration-200 cursor-pointer ${
+                      className={`relative px-2 sm:px-6 py-4 text-[10px] sm:text-xs font-bold tracking-wider sm:tracking-widest transition-colors duration-200 cursor-pointer ${
                         isActive
                           ? 'text-foreground'
                           : 'text-muted-foreground hover:text-foreground'
